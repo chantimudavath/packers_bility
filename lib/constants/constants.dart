@@ -1,16 +1,3 @@
-class ApiStatus {
-  static const int successCode = 200;
-  static const int unauthorizedCode = 401;
-  static const int createdCode = 201;
-  static const int serverErrorCode = 500;
-  static const int badRequestCode = 400;
-  static const int notFoundCode = 404;
-}
-
-class ScreenSizes {
-  static const double mobileWidth = 00;
-}
-
 
 enum Languages {
   afrikkans,
