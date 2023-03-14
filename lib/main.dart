@@ -4,6 +4,7 @@ import 'package:packers_bility/LoginFlow/otp.dart';
 import 'package:packers_bility/constants/constants.dart';
 import 'package:get/get.dart';
 import 'package:packers_bility/home_screens/home_screen.dart';
+import 'package:packers_bility/profile_screens/profile_screen.dart';
 import 'LoginFlow/welcomescreen.dart';
 
 Future<void> main() async {
@@ -57,7 +58,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
        getPages: [
-        GetPage(name: '/', page: () => const HomePage()),
+        GetPage(name: '/', page: () => const MyProfile()),
         GetPage(name: '/otpScreen', page: () => const OTPScreen()),
         GetPage(name: '/homePage', page: () => const HomePage()),
          GetPage(name: '/welComeScreen', page: () => const WelComeScreen()),
