@@ -39,5 +39,40 @@ class StaticData{
     ];
     return mainScreenIcons;
   }
-
+     static List profileList() {
+    List profileList = [
+      {
+        "title": "User Profile",
+        "subTitle": "Change Your Login Details.",
+        "image": "assets/user-icon.png",
+        
+       
+      },
+      {
+        "title": "Business Details",
+        "subTitle": "Change Address GST  No, Contact etc.",
+        "image": "assets/home-icon.png",
+       
+      },
+      {
+        "title": "Quotation Theme",
+        "subTitle": "Change Quotation Theme and Form.",
+        "image": "assets/quotation.png",
+       
+      },
+      {
+        "title": "Bill/Invoice",
+        "subTitle": "Change terms& Condition.",
+        "image": "assets/bill.png",
+       
+      },
+        {
+        "title": "Watermark",
+        "subTitle": "assets/survey-list.png",
+        "image": "assets/survey-list.png",
+       
+      },
+    ];
+    return profileList;
+  }
 }
