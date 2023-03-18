@@ -133,7 +133,7 @@ class _MyProfileState extends State<MyProfile> {
              // color: Colors.green,
               borderRadius: BorderRadius.all( Radius.circular(40) )
             ),
-                              child: Image.asset("assets/quotation.png")),
+                              child: Image.asset("assets/quotation-design.png")),
                           SizedBox(
                             height: Dimensions.paddingSizeDefult,
                           ),
@@ -159,7 +159,7 @@ class _MyProfileState extends State<MyProfile> {
                           Container(
                               height: 50,
                               width: 50,
-                              child: Image.asset("assets/home-icon.png")),
+                              child: Image.asset("assets/check-your-rewards.png")),
                           SizedBox(
                             height: Dimensions.paddingSizeDefult,
                           ),
@@ -185,7 +185,7 @@ class _MyProfileState extends State<MyProfile> {
                           Container(
                               height: 50,
                               width: 50,
-                              child: Image.asset("assets/Subscriptions.png")),
+                              child: Image.asset("assets/refer-and-get.png")),
                           SizedBox(
                             height: Dimensions.paddingSizeDefult,
                           ),
