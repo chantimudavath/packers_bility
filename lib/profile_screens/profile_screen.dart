@@ -94,16 +94,18 @@ class _MyProfileState extends State<MyProfile> {
                       Padding(
                         padding: const EdgeInsets.only(top: 20),
                         child: Text(
-                          "Nice packers and Movers",
-                          style: TextStyle(fontSize: 16),
+                          "Nice Packers & Movers",
+                          style: TextStyle(fontSize: 20),
                         ),
                       ),
-                      Text("ID no : 1234568765"),
+                      Text("ID : #12345",
+                      style: TextStyle(fontSize: 17)),
                     ],
                   )
                 ],
               ),
             ),
+            
             const SizedBox(
               width: Dimensions.paddingSizeExtraLarge,
             ),
@@ -116,7 +118,7 @@ class _MyProfileState extends State<MyProfile> {
                   Card(
                     child: Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                        borderRadius: BorderRadius.all(Radius.circular(40)),
                       ),
 
                       height: 100,
@@ -137,6 +139,7 @@ class _MyProfileState extends State<MyProfile> {
                           SizedBox(
                             height: Dimensions.paddingSizeDefult,
                           ),
+
                           Text("Quotation Design",
                               style: TextStyle(fontSize: 10)),
                         ],

@@ -50,26 +50,26 @@ class StaticData{
       },
       {
         "title": "Business Details",
-        "subTitle": "Change Address GST  No, Contact etc.",
-        "image": "assets/home-icon.png",
+        "subTitle": "Change Address, GST  No, Contact etc.",
+        "image": "assets/business-details.png",
        
       },
       {
         "title": "Quotation Theme",
-        "subTitle": "Change Quotation Theme and Form.",
-        "image": "assets/quotation.png",
+        "subTitle": "Change quotation theme and Form.",
+        "image": "assets/quotation-theme.png",
        
       },
       {
         "title": "Bill/Invoice",
-        "subTitle": "Change terms& Condition.",
-        "image": "assets/bill.png",
+        "subTitle": "Change Terms & Condition",
+        "image": "assets/bill-invoice.png",
        
       },
         {
         "title": "Watermark",
-        "subTitle": "assets/survey-list.png",
-        "image": "assets/survey-list.png",
+        "subTitle": "Watermark setting for all document",
+        "image": "assets/water-mark.png",
        
       },
     ];
