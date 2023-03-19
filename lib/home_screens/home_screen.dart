@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         leading: const Icon(Icons.menu),
         title: Text(
-            AppLocalizationUtil.getTranslatedString("nice_packers_movers")),
+            AppLocalizationUtil.getTranslatedString("Nice Packers & Movers")),
         actions: const [
           Icon(Icons.alarm_add_outlined),
           SizedBox(
@@ -109,11 +109,15 @@ class _HomePageState extends State<HomePage> {
             ),
             Center(
               child: Card(
+                  shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(25.0),
+                ),
                   color: Colors.white,
-                  elevation: 8.0,
+                  elevation: 5.0,
+                  
                   child: Container(
-                    // padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-                    height: 200,
+                    // padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                    height: 210,
                     width: MediaQuery.of(context).size.width * 0.85,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -124,8 +128,8 @@ class _HomePageState extends State<HomePage> {
                             "Nice Pacekers & Movers",
                             style: (FontManager().getTextStyle(
                               context,
-                              fontSize: 16,
-                              lWeight: FontWeight.w400,
+                              fontSize: 18,
+                              lWeight: FontWeight.w500,
                               color: ColorCodes.BLACK,
                             )),
                           ),
@@ -145,36 +149,36 @@ class _HomePageState extends State<HomePage> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      "User Id",
+                                      "User ID",
                                       style: (FontManager().getTextStyle(
                                         context,
-                                        fontSize: 14,
+                                        fontSize: 16,
                                         // lWeight: FontWeight.w400,
                                         color: ColorCodes.BLACK26,
                                       )),
                                     ),
                                     SizedBox(
-                                      height: 5,
+                                      height: 8,
                                     ),
                                     Text(
                                       "850174597",
                                       style: (FontManager().getTextStyle(
                                         context,
                                         fontSize: 18,
-                                        lWeight: FontWeight.w400,
+                                        lWeight: FontWeight.w700,
                                         color: ColorCodes.BLACK,
                                       )),
                                     ),
                                     SizedBox(
-                                      height: 5,
+                                      height: 8,
                                     ),
                                     Text(
-                                      "copy",
+                                      "Copy",
                                       style: (FontManager().getTextStyle(
                                         context,
-                                        fontSize: 12,
+                                        fontSize: 14,
                                         lWeight: FontWeight.w400,
-                                        color: ColorCodes.BLACK,
+                                        color: Color.fromARGB(255, 98, 195, 233),
                                       )),
                                     )
                                   ],
@@ -205,32 +209,32 @@ class _HomePageState extends State<HomePage> {
                                       "Plan",
                                       style: (FontManager().getTextStyle(
                                         context,
-                                        fontSize: 14,
+                                        fontSize: 16,
                                         // lWeight: FontWeight.w400,
                                         color: ColorCodes.BLACK26,
                                       )),
                                     ),
                                     SizedBox(
-                                      height: 5,
+                                      height: 8,
                                     ),
                                     Text(
                                       "Silver",
                                       style: (FontManager().getTextStyle(
                                         context,
                                         fontSize: 18,
-                                        lWeight: FontWeight.w400,
+                                        lWeight: FontWeight.w700,
                                         color: ColorCodes.BLACK,
                                       )),
                                     ),
                                     SizedBox(
-                                      height: 5,
+                                      height: 8,
                                     ),
                                     Text(
                                       "20 Days Left",
                                       style: (FontManager().getTextStyle(
                                         context,
-                                        fontSize: 12,
-                                        lWeight: FontWeight.w400,
+                                        fontSize: 14,
+                                        lWeight: FontWeight.w500,
                                         color: ColorCodes.BLACK,
                                       )),
                                     )
@@ -288,12 +292,12 @@ class _HomePageState extends State<HomePage> {
                           ),
                           Container(
                             // padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-                            height: 470,
+                            height: 410,
                             width: MediaQuery.of(context).size.width * 0.85,
                             child: GridView.count(
                                  crossAxisCount: 3, 
                                    crossAxisSpacing: 4.0,  
-                mainAxisSpacing: 8.0,  
+                mainAxisSpacing: 10.0,  
                                  children: List.generate(arr.length, (index) {  
                   return Column(
                                     children: [
@@ -304,7 +308,7 @@ class _HomePageState extends State<HomePage> {
                                             border: Border.all(width: 1.0),
                                             borderRadius: const BorderRadius.all(
                                                 Radius.circular(
-                                                    30.0) //                 <--- border radius here
+                                                    40.0) //                 <--- border radius here
                                                 ),
                                           ),
                                           child: Column(

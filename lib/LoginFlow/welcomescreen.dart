@@ -45,12 +45,12 @@ class _WelComeScreenState extends State<WelComeScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children:  [
                         Text(
-                         AppLocalizationUtil.getTranslatedString("well_come"),
+                         AppLocalizationUtil.getTranslatedString("WELCOME,"),
                           style: const TextStyle(fontSize: 28, color: Colors.white),
                         ),
                         Text(
-                          "Please Enter Your Details",
-                          style: TextStyle(fontSize: 12, color: Colors.white24),
+                          "Please Enter your Details",
+                          style: TextStyle(fontSize: 15, color: Colors.white54),
                         ),
                       ],
                     ),
@@ -68,7 +68,7 @@ class _WelComeScreenState extends State<WelComeScreen> {
                     children: [
                       const Text(
                         "Name Of Buisness",
-                        style: TextStyle(fontSize: 10, color: Colors.white24),
+                        style: TextStyle(fontSize: 10, color: Colors.white38),
                       ),
                       TextFormField(
                         decoration: InputDecoration(
@@ -96,7 +96,7 @@ class _WelComeScreenState extends State<WelComeScreen> {
       
                        const Text(
                         "Work E-Mail",
-                        style: TextStyle(fontSize: 10, color: Colors.white24),
+                        style: TextStyle(fontSize: 10, color: Colors.white38),
                       ),
                       TextFormField(
                         decoration: InputDecoration(
@@ -125,7 +125,7 @@ class _WelComeScreenState extends State<WelComeScreen> {
       
                        const Text(
                         "Password",
-                        style: TextStyle(fontSize: 10, color: Colors.white24),
+                        style: TextStyle(fontSize: 10, color: Colors.white38),
                       ),
                       TextFormField(
                         decoration: InputDecoration(
@@ -154,7 +154,9 @@ class _WelComeScreenState extends State<WelComeScreen> {
       
                        const Text(
                         "Confirm Password",
-                        style: TextStyle(fontSize: 10, color: Colors.white24),
+                        style: TextStyle(
+                          fontSize: 10,
+                          color: Colors.white38),
                       ),
                       TextFormField(
                         decoration: InputDecoration(
@@ -186,9 +188,11 @@ class _WelComeScreenState extends State<WelComeScreen> {
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: SizedBox(
+                    width: 152,
                     height: 34,
                     child: ElevatedButton(
                       child:  Text("Create Account"),
+                      
                       onPressed: () {
                   if (_formKey.currentState!.validate()) {
                

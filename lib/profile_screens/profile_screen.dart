@@ -26,22 +26,17 @@ class _MyProfileState extends State<MyProfile> {
                    child: Card(
                   elevation: 3,
                      child: ListTile(
-                      leading:  Image.asset(
-                                                    arr[index]["image"]),
-                                   title:Text(
-                  
-                      arr[index]["title"]
-                      ) ,
-                                   subtitle: Text(
-                    
-                      arr[index]["subTitle"]
+                      leading: Image.asset(arr[index]["image"]),
+                      title: Text(arr[index]["title"]
                       ),
-                                   // leading: arr[index]["image"],
-                                   trailing: Icon(Icons.arrow_circle_right),
+                      subtitle: Text(arr[index]["subTitle"]
+                      ),
+                  //  leading: arr[index]["image"],
+                      trailing: Icon(Icons.arrow_forward_ios),
                      ),
                    ),
                  )]);
-          }
+               }
               ),
     );
   }
@@ -121,8 +116,8 @@ class _MyProfileState extends State<MyProfile> {
                         borderRadius: BorderRadius.all(Radius.circular(40)),
                       ),
 
-                      height: 100,
-                      width: 100,
+                      height: 110,
+                      width: 110,
                       // color: ColorCodes.red500,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -141,7 +136,7 @@ class _MyProfileState extends State<MyProfile> {
                           ),
 
                           Text("Quotation Design",
-                              style: TextStyle(fontSize: 10)),
+                              style: TextStyle(fontSize: 13)),
                         ],
                       ),
                     ),
@@ -152,8 +147,8 @@ class _MyProfileState extends State<MyProfile> {
                         borderRadius: BorderRadius.all(Radius.circular(30.0)),
                       ),
 
-                      height: 100,
-                      width: 100,
+                      height: 110,
+                      width: 110,
                       // color: ColorCodes.red500,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -167,7 +162,7 @@ class _MyProfileState extends State<MyProfile> {
                             height: Dimensions.paddingSizeDefult,
                           ),
                           Text("Check your Rewerds",
-                              style: TextStyle(fontSize: 10)),
+                              style: TextStyle(fontSize: 13)),
                         ],
                       ),
                     ),
@@ -178,8 +173,8 @@ class _MyProfileState extends State<MyProfile> {
                         borderRadius: BorderRadius.all(Radius.circular(30.0)),
                       ),
 
-                      height: 100,
-                      width: 100,
+                      height: 110,
+                      width: 110,
                       // color: ColorCodes.red500,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -193,7 +188,7 @@ class _MyProfileState extends State<MyProfile> {
                             height: Dimensions.paddingSizeDefult,
                           ),
                           Text("Refer & Get 1 Month Free",
-                              style: TextStyle(fontSize: 10)),
+                              style: TextStyle(fontSize: 13)),
                         ],
                       ),
                     ),

@@ -85,11 +85,11 @@ class _OTPScreenState extends State<OTPScreen> {
               ),
               Container(
                 width: 216,
-                height: 4,
+                height: 5,
                 color: Color(0xFFD9D9D9),
               ),
                Padding(
-                padding: EdgeInsets.only(left: 80, right: 35, top: 36),
+                padding: EdgeInsets.only(left: 72, right: 72, top: 36),
                 child: Row(
                   children: [
                     Text('Enter OTP'),
