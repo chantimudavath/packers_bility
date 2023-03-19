@@ -276,7 +276,7 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.white,
                     elevation: 50.0,
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(20.0),
                       child: Column(
                         children: [
                           Padding(
@@ -292,34 +292,34 @@ class _HomePageState extends State<HomePage> {
                           ),
                           Container(
                             // padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-                            height: 410,
-                            width: MediaQuery.of(context).size.width * 0.85,
-                            child: GridView.count(
-                                 crossAxisCount: 3, 
-                                   crossAxisSpacing: 4.0,  
+                            height: 350,
+                            width: MediaQuery.of(context).size.width * 0.85,                           child: GridView.count(
+                                 crossAxisCount: 4, 
+                                   crossAxisSpacing: 2.0,  
                 mainAxisSpacing: 10.0,  
                                  children: List.generate(arr.length, (index) {  
                   return Column(
                                     children: [
                                       Container(
-                                          height: 80,
-                                          width: 80,
+                                          height: 70,
+                                          width: 70,
                                           decoration: BoxDecoration(
-                                            border: Border.all(width: 1.0),
+                                            // border: Border.all(width: 1.0),
+                                            color: Color.fromARGB(185, 226, 226, 226),
+                                            
                                             borderRadius: const BorderRadius.all(
                                                 Radius.circular(
-                                                    40.0) //                 <--- border radius here
+                                                  40.0),// <--- border radius here
+                                                 
                                                 ),
                                           ),
                                           child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
+                                            crossAxisAlignment: CrossAxisAlignment.center,
+                                            mainAxisAlignment: MainAxisAlignment.center,
                                             children: [
                                               Container(
-                                                height: 50,
-                                                width: 50,
+                                                height: 40,
+                                                width: 35,
                                                 child: Image.asset(
                                                     arr[index]["image"]),
                                                 // color: Colors.red,
