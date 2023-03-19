@@ -75,4 +75,58 @@ class StaticData{
     ];
     return profileList;
   }
+  static List documentsList() {
+    List documentsList = [
+      {
+        "title": "Quotation",
+        "subTitle": "Click here to view Quotation",
+        "image": "quotation.png",
+        
+      },
+      {
+        "title": "Survey List",
+        "subTitle": "Click here to view Survey List",
+        "image": "assets/survey-list.png",
+       
+      },
+      {
+        "title": "Packing List",
+        "subTitle": "Click here to view Packing List",
+        "image": "assets/packing-list.png",
+       
+      },
+      {
+        "title": "LR-Bilty",
+        "subTitle": "Click here to view LR-Bilty",
+        "image": "assets/LR-Bilty.png",
+       
+      },
+        {
+        "title": "Car Condition",
+        "subTitle": "Click here to view Car Condition",
+        "image": "assets/car-condition.png",
+       
+      },
+      {
+        "title": "Bill",
+        "subTitle": "Click here to view Bill",
+        "image": "assets/bill.png",
+       
+      },
+      {
+        "title": "Money Recipt",
+        "subTitle": "Click here to view Money Recipt",
+        "image": "assets/money-recipt.png",
+       
+      },
+      {
+        "title": "PB Card",
+        "subTitle": "Click here to view PB Card",
+        "image": "assets/pb-card.png",
+       
+      },
+
+    ];
+    return documentsList;
+  }
 }

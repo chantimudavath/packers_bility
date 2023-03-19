@@ -1,8 +1,8 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:packers_bility/Utilitys/static_data.dart';
 import 'package:packers_bility/constants/app_localization_util.dart';
+
+import '../Utilitys/colors.dart';
 
 class DocumentsList extends StatefulWidget {
   const DocumentsList({super.key});
@@ -12,46 +12,65 @@ class DocumentsList extends StatefulWidget {
 }
 
 class _DocumentsListState extends State<DocumentsList> {
-  var arrofDoc = StaticData.profileList();
+  List arr = StaticData.documentsList();
+
+  Widget documentsList() {
+    print("Aj${arr.length}");
+    return Column(
+      children: List.generate(arr.length, (index) {
+        return Column(children: [
+          Padding(
+            padding: const EdgeInsets.only(
+              left: 20,
+              right: 20,
+            ),
+            child: Card(
+              elevation: 3,
+              child: ListTile(
+                leading: Image.asset(arr[index]["image"]),
+                title: Text(arr[index]["title"]),
+                subtitle: Text(arr[index]["subTitle"]),
+                //  leading: arr[index]["image"],
+                trailing: Icon(Icons.arrow_forward_ios),
+              ),
+            ),
+          )
+        ]);
+      }),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     appBar: AppBar(
+      appBar: AppBar(
         leading: const Icon(Icons.menu),
-        title: Text(
-            AppLocalizationUtil.getTranslatedString("Document")),
+        title: Text(AppLocalizationUtil.getTranslatedString("")),
         actions: const [
           Icon(Icons.alarm_add_outlined),
           SizedBox(
             width: 10,
           ),
           Icon(Icons.man),
-          
         ],
       ),
-
       body: SingleChildScrollView(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-
-          children: [
-            Container(
-              child: Text("Documents"),
-            ),
-
-            Card(
-              child: Container(child: Column(
-                children: List.generate(arrofDoc.length, (index) => ListTile(
-            leading: CircleAvatar(
-              child: Image.asset(arrofDoc[index]["image"]),
-              
-            ),title: Text(arrofDoc[index]["title"]),
-                )),
-              )),
-            )
-          ],
-        ),
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Stack(children: [] ),
+                    ]
+                    ),
+              ),
+              documentsList()
+            ]),
       ),
     );
   }
