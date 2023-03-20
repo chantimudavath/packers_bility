@@ -44,14 +44,14 @@ class _DocumentsListState extends State<DocumentsList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.menu),
+        leading: const Icon(Icons.format_list_bulleted),
         title: Text(AppLocalizationUtil.getTranslatedString("")),
         actions: const [
-          Icon(Icons.alarm_add_outlined),
+          Icon(Icons.notifications),
           SizedBox(
             width: 10,
           ),
-          Icon(Icons.man),
+          Icon(Icons.person),
         ],
       ),
       body: SingleChildScrollView(

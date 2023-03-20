@@ -31,16 +31,15 @@ class _HomePageState extends State<HomePage> {
     List arr = StaticData.mainScreenIcons();
     return Scaffold(
       appBar: AppBar(
-        leading: Image.asset('assets/menu-iocn.png',fit: BoxFit.scaleDown),
-        
+        leading: const Icon(Icons.format_list_bulleted),
         title: Text(
             AppLocalizationUtil.getTranslatedString("Nice Packers & Movers")),
         actions: const [
-          Icon(Icons.alarm_add_outlined),
+          Icon(Icons.notifications),
           SizedBox(
             width: 10,
           ),
-          Icon(Icons.man)
+          Icon(Icons.person)
         ],
       ),
       bottomNavigationBar: CurvedNavigationBar(

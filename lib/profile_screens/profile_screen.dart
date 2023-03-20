@@ -45,17 +45,17 @@ class _MyProfileState extends State<MyProfile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.menu),
+        leading: const Icon(Icons.format_list_bulleted),
         title: const Text(
           '',
           // AppLocalizationUtil.getTranslatedString("nice_packers_movers")
         ),
         actions: const [
-          Icon(Icons.alarm_add_outlined),
+          Icon(Icons.notifications),
           SizedBox(
             width: 10,
           ),
-          Icon(Icons.man)
+          Icon(Icons.person)
         ],
       ),
       body: SingleChildScrollView(

@@ -14,7 +14,7 @@ class WelComeScreen extends StatefulWidget {
 class _WelComeScreenState extends State<WelComeScreen> {
   final _formKey = GlobalKey<FormState>();
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
     return Scaffold(
       backgroundColor: const Color(0xFF026EB6),
       body: SingleChildScrollView(
