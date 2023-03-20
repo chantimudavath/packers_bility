@@ -80,15 +80,27 @@ class _OTPScreenState extends State<OTPScreen> {
               Container(
                 width: 119,
                 height: 194,
-                color: Color(0xFF026EB6),
+                decoration: BoxDecoration(
+                           border: Border.all(
+                             color: Color(0xFFF9B585),
+                             
+                             width: 5.0,
+                             style: BorderStyle.solid
+                           ),
+                           borderRadius: BorderRadius.circular(25),
+                          //  child: Image.asset(ImagesAssetPAth.mailImage),
+                           color: Color(0xFF026EB6),
+                           
+                    ),
+                // color: Color(0xFF026EB6),
                 child: Image.asset(ImagesAssetPAth.mailImage),
               ),
               Container(
                 width: 216,
-                height: 5,
+                height: 7,
                 color: Color(0xFFD9D9D9),
               ),
-               Padding(
+              Padding(
                 padding: EdgeInsets.only(left: 72, right: 72, top: 36),
                 child: Row(
                   children: [
@@ -112,7 +124,7 @@ class _OTPScreenState extends State<OTPScreen> {
                 ),
                 child: Container(
                   child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       // Checkbox(
@@ -147,23 +159,34 @@ class _OTPScreenState extends State<OTPScreen> {
                   ),
                 ),
               ),
-               const SizedBox(
+              const SizedBox(
                 height: 26,
               ),
-
-
-              ElevatedButton(
-                child: const Text(ProjectStrings.getStarted),
-                onPressed: () {
-                 Get.to( const WelComeScreen());
-                },
-                style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all(Color(0xFF026EB6)),
-                    padding: MaterialStateProperty.all(EdgeInsets.all(10)),
-                    textStyle:
-                        MaterialStateProperty.all(TextStyle(fontSize: 14))),
-              ),
+              Align(
+                  alignment: Alignment.bottomCenter,
+                  child: SizedBox(
+                    width: 152,
+                    height: 34,
+                    child: ElevatedButton(
+                      child: const Text(ProjectStrings.getStarted),
+                      onPressed: () {
+                        Get.to(const WelComeScreen());
+                      },
+                      style: ButtonStyle(
+                          shape: (MaterialStateProperty.all<
+                              RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(26.0),
+                            ),
+                          )),
+                          backgroundColor:
+                              MaterialStateProperty.all(Color(0xFF026EB6)),
+                          padding:
+                              MaterialStateProperty.all(EdgeInsets.all(10)),
+                          textStyle: MaterialStateProperty.all(
+                              TextStyle(fontSize: 14))),
+                    ),
+                  )),
               const SizedBox(
                 height: 164,
               ),

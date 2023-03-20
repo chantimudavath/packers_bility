@@ -283,7 +283,8 @@ class _HomePageState extends State<HomePage> {
                             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                                 RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(26.0),
-                                ),),
+                                ),
+                                ),
                           backgroundColor:
                               MaterialStateProperty.all(Color(0xFF026EB6)),
                           padding: MaterialStateProperty.all(EdgeInsets.all(10)),

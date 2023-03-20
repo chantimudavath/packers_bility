@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:packers_bility/LoginFlow/Login.dart';
 import 'package:packers_bility/LoginFlow/otp.dart';
 import 'package:packers_bility/constants/constants.dart';
 import 'package:get/get.dart';
@@ -59,7 +60,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
        getPages: [
-        GetPage(name: '/', page: () => const DocumentsList()),
+        GetPage(name: '/', page: () => const OTPScreen()),
         GetPage(name: '/otpScreen', page: () => const OTPScreen()),
         GetPage(name: '/homePage', page: () => const HomePage()),
         GetPage(name: '/welComeScreen', page: () => const WelComeScreen()),

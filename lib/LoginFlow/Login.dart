@@ -46,17 +46,47 @@ class _LoginState extends State<Login> {
                  const SizedBox(
                   height:34 ,
                  ),
+      //            Center(
+      // child: Container(
+      //   width: 119,
+      //   height: 194,
+      //   decoration: BoxDecoration(
+      //     border: Border.all(
+      //       color: Color(0xFFF9B585),
+            
+      //       width: 5.0,
+      //       style: BorderStyle.solid
+      //     ),
+          
+      //     borderRadius: BorderRadius.circular(20),
+      //     color: Color(Color(0xFF026EB6),
+      //     ),
+      //   ),),),
         
-                 Container(
-                  width: 119,
-                  height: 194,
-                  color: Color(0xFF026EB6),
-                  child: Image.asset(ImagesAssetPAth.mailImage
-                ),
+                 Center(
+                   child: Container(
+                    width: 119,
+                    height: 194,
+                    decoration: BoxDecoration(
+                           border: Border.all(
+                             color: Color(0xFFF9B585),
+                             
+                             width: 5.0,
+                             style: BorderStyle.solid
+                           ),
+                           borderRadius: BorderRadius.circular(25),
+                         
+                           color: Color(0xFF026EB6),
+                           
+                    ),
+                    
+                     child: Image.asset(ImagesAssetPAth.mailImage), 
+                            
+                   ),
                  ),
                Container(
                 width: 216,
-                height: 4,
+                height: 7,
                  color: Color(0xFFD9D9D9),
                ),
                   Padding(  
@@ -114,21 +144,32 @@ class _LoginState extends State<Login> {
          const SizedBox(
                 height: 26,
               ),
+               Align(
+                  alignment: Alignment.bottomCenter,
+                  child: SizedBox(
+                    width: 152,
+                    height: 34,
 
                  
-           ElevatedButton(
+                  child: ElevatedButton(
               child:  const Text(ProjectStrings.getOTP),
               onPressed: () {
                 print("Button Clicked");
                Get.to(() => const OTPScreen());
               },
               style: ButtonStyle(
+                shape: (MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(26.0),
+                                ),)),
                   backgroundColor: MaterialStateProperty.all(Color(0xFF026EB6)),
                   padding: MaterialStateProperty.all(EdgeInsets.all(10)),
                   textStyle: MaterialStateProperty.all(TextStyle(fontSize: 14))),
-              ),  
+              ), 
+          )
+          ), 
               const SizedBox(
-                height: 134,
+                height: 184,
               ),
                 const Text(ProjectStrings.needAnyHelp,style: TextStyle(fontSize: 12)),
                 SizedBox(height: 15,),
@@ -144,13 +185,14 @@ class _LoginState extends State<Login> {
                   
                 //   ),
                 // )
- Row(crossAxisAlignment: CrossAxisAlignment.center,
- mainAxisAlignment: MainAxisAlignment.center,
-   children:   [Icon(Icons.call),
-    SizedBox(
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                children:[Icon(Icons.call),
+                SizedBox(
                 width: 10,  
                   ),
-     Text(ProjectStrings.callUsAt,style: TextStyle(fontSize: 12)),
+                  Text(ProjectStrings.callUsAt,style: TextStyle(fontSize: 12)),
    ],
  )
             ],
