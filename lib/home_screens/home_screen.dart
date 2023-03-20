@@ -31,7 +31,8 @@ class _HomePageState extends State<HomePage> {
     List arr = StaticData.mainScreenIcons();
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.menu),
+        leading: Image.asset('assets/menu-iocn.png',fit: BoxFit.scaleDown),
+        
         title: Text(
             AppLocalizationUtil.getTranslatedString("Nice Packers & Movers")),
         actions: const [
@@ -57,36 +58,41 @@ class _HomePageState extends State<HomePage> {
           milliseconds: 200,
         ),
         items: <Widget>[
-          Icon(
-            Icons.play_arrow_outlined,
-            size: 30,
-            color:
-                selectedIconIndex == 0 ? ColorCodes.WHITE : ColorCodes.blackD80,
-          ),
-          Icon(
-            Icons.search,
-            size: 30,
-            color:
-                selectedIconIndex == 1 ? ColorCodes.WHITE : ColorCodes.blackD80,
-          ),
-          Icon(
-            Icons.home_outlined,
-            size: 30,
-            color:
-                selectedIconIndex == 2 ? ColorCodes.WHITE : ColorCodes.blackD80,
-          ),
-          Icon(
-            Icons.favorite_border_outlined,
-            size: 30,
-            color:
-                selectedIconIndex == 3 ? ColorCodes.WHITE : ColorCodes.blackD80,
-          ),
-          Icon(
-            Icons.person_outline,
-            size: 30,
-            color:
-                selectedIconIndex == 4 ? ColorCodes.WHITE : ColorCodes.blackD80,
-          ),
+          Image.asset('assets/home-icon.png',height: 25,),
+          Image.asset('assets/subscriptions.png',height: 25),
+          Image.asset('assets/add-bill.png',height: 25,),
+          Image.asset('assets/bill-design.png',height: 25,),
+          Image.asset('assets/setting.png',height: 25,),
+          // Icon(
+          //   Icons.play_arrow_outlined,
+          //   size: 30,
+          //   color:
+          //       selectedIconIndex == 0 ? ColorCodes.WHITE : ColorCodes.blackD80,
+          // ),
+          // Icon(
+          //   Icons.search,
+          //   size: 30,
+          //   color:
+          //       selectedIconIndex == 1 ? ColorCodes.WHITE : ColorCodes.blackD80,
+          // ),
+          // Icon(
+          //   Icons.home_outlined,
+          //   size: 30,
+          //   color:
+          //       selectedIconIndex == 2 ? ColorCodes.WHITE : ColorCodes.blackD80,
+          // ),
+          // Icon(
+          //   Icons.favorite_border_outlined,
+          //   size: 30,
+          //   color:
+          //       selectedIconIndex == 3 ? ColorCodes.WHITE : ColorCodes.blackD80,
+          // ),
+          // Icon(
+          //   Icons.person_outline,
+          //   size: 30,
+          //   color:
+          //       selectedIconIndex == 4 ? ColorCodes.WHITE : ColorCodes.blackD80,
+          // ),
         ],
       ),
       body: SingleChildScrollView(
@@ -272,13 +278,8 @@ class _HomePageState extends State<HomePage> {
                     height: 40,
                     child: ElevatedButton(
                       child:  Text("Renew Now"),
-                        // Center(
-                          
-                        //   child: ElevatedButton(
-                            
-                        //     child: const Text("Register Now"),
-                            
-                            onPressed: () {},
+                      
+                      onPressed: () {},
                             style: ButtonStyle(
                             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                                 RoundedRectangleBorder(
@@ -308,8 +309,9 @@ class _HomePageState extends State<HomePage> {
                 ),
                 color: Colors.white,
                 elevation: 50.0,
-                child: Padding(
+                child: Container(
                     padding: const EdgeInsets.all(8.0),
+                    width: MediaQuery.of(context).size.width * 0.85,
                     child: Column(
                       children: [
                         Padding(
@@ -330,7 +332,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         Container(
                           // padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-                          height: 350,
+                          height: 250,
                           width: MediaQuery.of(context).size.width * 0.85,
                           child: GridView.count(
                             crossAxisCount: 4,
@@ -345,7 +347,7 @@ class _HomePageState extends State<HomePage> {
                                       decoration: BoxDecoration(
                                         // border: Border.all(width: 1.0),
                                         color:
-                                            Color.fromARGB(185, 226, 226, 226),
+                                            Color.fromARGB(255, 240, 239, 239),
 
                                         borderRadius: const BorderRadius.all(
                                           Radius.circular(
@@ -360,7 +362,7 @@ class _HomePageState extends State<HomePage> {
                                         children: [
                                           Container(
                                             height: 40,
-                                            width: 35,
+                                            width: 25,
                                             child: Image.asset(
                                                 arr[index]["image"]),
                                             // color: Colors.red,
