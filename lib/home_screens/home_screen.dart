@@ -15,7 +15,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-   int selectedIconIndex = 2;
+  int selectedIconIndex = 2;
   final List<String> images = [
     'https://images.unsplash.com/photo-1586882829491-b81178aa622e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80',
     'https://images.unsplash.com/photo-1586871608370-4adee64d1794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2862&q=80',
@@ -30,7 +30,6 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     List arr = StaticData.mainScreenIcons();
     return Scaffold(
-      
       appBar: AppBar(
         leading: const Icon(Icons.menu),
         title: Text(
@@ -43,19 +42,14 @@ class _HomePageState extends State<HomePage> {
           Icon(Icons.man)
         ],
       ),
-   
-   
-   
-   bottomNavigationBar: CurvedNavigationBar(
+      bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.transparent,
         index: selectedIconIndex,
         buttonBackgroundColor: ColorCodes.AppleColor,
         height: 60.0,
         color: ColorCodes.whiteWithOpacity,
-        onTap: (index)
-        {
-          setState(()
-          {
+        onTap: (index) {
+          setState(() {
             selectedIconIndex = index;
           });
         },
@@ -63,14 +57,38 @@ class _HomePageState extends State<HomePage> {
           milliseconds: 200,
         ),
         items: <Widget>[
-          Icon(Icons.play_arrow_outlined, size: 30,color: selectedIconIndex == 0 ? ColorCodes.WHITE :  ColorCodes.blackD80,),
-          Icon(Icons.search, size: 30,color: selectedIconIndex == 1 ?  ColorCodes.WHITE :  ColorCodes.blackD80,),
-          Icon(Icons.home_outlined, size: 30,color: selectedIconIndex == 2 ?  ColorCodes.WHITE :  ColorCodes.blackD80,),
-          Icon(Icons.favorite_border_outlined, size: 30,color: selectedIconIndex == 3 ? ColorCodes.WHITE :  ColorCodes.blackD80,),
-          Icon(Icons.person_outline, size: 30,color: selectedIconIndex == 4 ?  ColorCodes.WHITE :  ColorCodes.blackD80,),
+          Icon(
+            Icons.play_arrow_outlined,
+            size: 30,
+            color:
+                selectedIconIndex == 0 ? ColorCodes.WHITE : ColorCodes.blackD80,
+          ),
+          Icon(
+            Icons.search,
+            size: 30,
+            color:
+                selectedIconIndex == 1 ? ColorCodes.WHITE : ColorCodes.blackD80,
+          ),
+          Icon(
+            Icons.home_outlined,
+            size: 30,
+            color:
+                selectedIconIndex == 2 ? ColorCodes.WHITE : ColorCodes.blackD80,
+          ),
+          Icon(
+            Icons.favorite_border_outlined,
+            size: 30,
+            color:
+                selectedIconIndex == 3 ? ColorCodes.WHITE : ColorCodes.blackD80,
+          ),
+          Icon(
+            Icons.person_outline,
+            size: 30,
+            color:
+                selectedIconIndex == 4 ? ColorCodes.WHITE : ColorCodes.blackD80,
+          ),
         ],
       ),
-   
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -110,11 +128,10 @@ class _HomePageState extends State<HomePage> {
             Center(
               child: Card(
                   shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25.0),
-                ),
+                    borderRadius: BorderRadius.circular(25.0),
+                  ),
                   color: Colors.white,
                   elevation: 5.0,
-                  
                   child: Container(
                     // padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                     height: 210,
@@ -178,7 +195,8 @@ class _HomePageState extends State<HomePage> {
                                         context,
                                         fontSize: 14,
                                         lWeight: FontWeight.w400,
-                                        color: Color.fromARGB(255, 98, 195, 233),
+                                        color:
+                                            Color.fromARGB(255, 98, 195, 233),
                                       )),
                                     )
                                   ],
@@ -247,18 +265,33 @@ class _HomePageState extends State<HomePage> {
                         SizedBox(
                           height: 10,
                         ),
-                        Center(
-                          child: ElevatedButton(
-                            child: const Text("Register Now"),
+                        Align(
+                  alignment: Alignment.bottomCenter,
+                  child: SizedBox(
+                    width: 250,
+                    height: 40,
+                    child: ElevatedButton(
+                      child:  Text("Renew Now"),
+                        // Center(
+                          
+                        //   child: ElevatedButton(
+                            
+                        //     child: const Text("Register Now"),
+                            
                             onPressed: () {},
                             style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(
-                                    Color(0xFF026EB6)),
-                                padding: MaterialStateProperty.all(
-                                    EdgeInsets.all(10)),
-                                textStyle: MaterialStateProperty.all(
-                                    TextStyle(fontSize: 14))),
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(26.0),
+                                ),),
+                          backgroundColor:
+                              MaterialStateProperty.all(Color(0xFF026EB6)),
+                          padding: MaterialStateProperty.all(EdgeInsets.all(10)),
+                          textStyle:
+                              MaterialStateProperty.all(TextStyle(fontSize: 14))),
+                              
                           ),
+                        ),
                         ),
                       ],
                     ),
@@ -268,79 +301,84 @@ class _HomePageState extends State<HomePage> {
               height: 20,
             ),
             Center(
-                child: Column(
-              children: [Card(
-                  shape: RoundedRectangleBorder(
+                child: Column(children: [
+              Card(
+                shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25.0),
                 ),
-                    color: Colors.white,
-                    elevation: 50.0,
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 20),
-                            child: Align(
+                color: Colors.white,
+                elevation: 50.0,
+                child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20),
+                          child: Align(
                               alignment: Alignment.topLeft,
-                              child: const SizedBox(child: Text("ADD DOCUMENTS",style: TextStyle(
-                                fontSize: 20,fontWeight: FontWeight.w500
-                              ),),)),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Container(
-                            // padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-                            height: 350,
-                            width: MediaQuery.of(context).size.width * 0.85,                           child: GridView.count(
-                                 crossAxisCount: 4, 
-                                   crossAxisSpacing: 2.0,  
-                mainAxisSpacing: 10.0,  
-                                 children: List.generate(arr.length, (index) {  
-                  return Column(
-                                    children: [
-                                      Container(
-                                          height: 70,
-                                          width: 70,
-                                          decoration: BoxDecoration(
-                                            // border: Border.all(width: 1.0),
-                                            color: Color.fromARGB(185, 226, 226, 226),
-                                            
-                                            borderRadius: const BorderRadius.all(
-                                                Radius.circular(
-                                                  40.0),// <--- border radius here
-                                                 
-                                                ),
+                              child: const SizedBox(
+                                child: Text(
+                                  "ADD DOCUMENTS",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              )),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          // padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                          height: 350,
+                          width: MediaQuery.of(context).size.width * 0.85,
+                          child: GridView.count(
+                            crossAxisCount: 4,
+                            crossAxisSpacing: 2.0,
+                            mainAxisSpacing: 10.0,
+                            children: List.generate(arr.length, (index) {
+                              return Column(
+                                children: [
+                                  Container(
+                                      height: 70,
+                                      width: 70,
+                                      decoration: BoxDecoration(
+                                        // border: Border.all(width: 1.0),
+                                        color:
+                                            Color.fromARGB(185, 226, 226, 226),
+
+                                        borderRadius: const BorderRadius.all(
+                                          Radius.circular(
+                                              40.0), // <--- border radius here
+                                        ),
+                                      ),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            height: 40,
+                                            width: 35,
+                                            child: Image.asset(
+                                                arr[index]["image"]),
+                                            // color: Colors.red,
                                           ),
-                                          child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.center,
-                                            mainAxisAlignment: MainAxisAlignment.center,
-                                            children: [
-                                              Container(
-                                                height: 40,
-                                                width: 35,
-                                                child: Image.asset(
-                                                    arr[index]["image"]),
-                                                // color: Colors.red,
-                                              ),
-                                            ],
-                                          )
-                                          // Image.asset(arr[index]["image"],fit: BoxFit.fill),
-                                          ),
-                                      Text(arr[index]["title"])
-                                    ],
-                                  );
-                                }),
+                                        ],
+                                      )
+                                      // Image.asset(arr[index]["image"],fit: BoxFit.fill),
+                                      ),
+                                  Text(arr[index]["title"])
+                                ],
+                              );
+                            }),
                           ),
-                    ),
-                        ],
-                      )),
+                        ),
+                      ],
+                    )),
               )
-              ]
-             
-             
-            ))
+            ]))
           ],
         ),
       ),
