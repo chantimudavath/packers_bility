@@ -62,14 +62,17 @@ class _OTPScreenState extends State<OTPScreen> {
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 119),
-                child: Container(
-                  child: const Text(
-                    "Sign UP",
-                    style: TextStyle(fontSize: 20),
+              Align(
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 119),
+                  child: Container(
+                    child: const Text(
+                      "Sign UP",
+                      style: TextStyle(fontSize: 20),
+                    ),
                   ),
                 ),
               ),
@@ -77,10 +80,13 @@ class _OTPScreenState extends State<OTPScreen> {
                 height: 34,
               ),
 
-              Container(
-                width: 119,
-                height: 194,
-                decoration: BoxDecoration(
+             Stack(
+                children: [
+                    Center(
+                   child: Container(
+                    width: 119,
+                    height: 194,
+                    decoration: BoxDecoration(
                            border: Border.all(
                              color: Color(0xFFF9B585),
                              
@@ -88,18 +94,26 @@ class _OTPScreenState extends State<OTPScreen> {
                              style: BorderStyle.solid
                            ),
                            borderRadius: BorderRadius.circular(25),
-                          //  child: Image.asset(ImagesAssetPAth.mailImage),
+                         
                            color: Color(0xFF026EB6),
                            
                     ),
-                // color: Color(0xFF026EB6),
-                child: Image.asset(ImagesAssetPAth.mailImage),
-              ),
-              Container(
-                width: 216,
-                height: 7,
-                color: Color(0xFFD9D9D9),
-              ),
+                    
+                     child: Image.asset(ImagesAssetPAth.mailImage), 
+                            
+                   ),
+                 ),
+               Positioned(
+                left: MediaQuery.of(context).size.width*0.28,
+                bottom: 0,
+                 child: Container(
+                  width: 216,
+                  height: 7,
+                   color: Color(0xFFD9D9D9),
+                 ),
+               ),
+                ],
+               ),
               Padding(
                 padding: EdgeInsets.only(left: 72, right: 72, top: 36),
                 child: Row(
@@ -190,7 +204,8 @@ class _OTPScreenState extends State<OTPScreen> {
               const SizedBox(
                 height: 164,
               ),
-              const Text(ProjectStrings.needAnyHelp),
+              Align(alignment: Alignment.center,
+                child: const Text(ProjectStrings.needAnyHelp)),
               SizedBox(
                 height: 15,
               ),

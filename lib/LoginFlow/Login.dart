@@ -46,24 +46,10 @@ class _LoginState extends State<Login> {
                  const SizedBox(
                   height:34 ,
                  ),
-      //            Center(
-      // child: Container(
-      //   width: 119,
-      //   height: 194,
-      //   decoration: BoxDecoration(
-      //     border: Border.all(
-      //       color: Color(0xFFF9B585),
-            
-      //       width: 5.0,
-      //       style: BorderStyle.solid
-      //     ),
-          
-      //     borderRadius: BorderRadius.circular(20),
-      //     color: Color(Color(0xFF026EB6),
-      //     ),
-      //   ),),),
-        
-                 Center(
+  
+               Stack(
+                children: [
+                    Center(
                    child: Container(
                     width: 119,
                     height: 194,
@@ -84,10 +70,16 @@ class _LoginState extends State<Login> {
                             
                    ),
                  ),
-               Container(
-                width: 216,
-                height: 7,
-                 color: Color(0xFFD9D9D9),
+               Positioned(
+                left: MediaQuery.of(context).size.width*0.28,
+                bottom: 0,
+                 child: Container(
+                  width: 216,
+                  height: 7,
+                   color: Color(0xFFD9D9D9),
+                 ),
+               ),
+                ],
                ),
                   Padding(  
                     padding: const EdgeInsets.only(left:59,right:35,top: 36
@@ -135,7 +127,12 @@ class _LoginState extends State<Login> {
                             ), 
                           
         
-                            const Text(ProjectStrings.iAgreeWiththeTermsandConditions,style: TextStyle(fontSize: 13),)
+                            Row(
+                              children: [
+                                const Text(ProjectStrings.iAgreeWiththeTermsandConditions,style: TextStyle(fontSize: 13,fontWeight:FontWeight.w700 ),),
+                                 const Text(ProjectStrings.termsandConditions,style: TextStyle(fontSize: 13,color: Colors.blue),),
+                              ],
+                            )
                             
                   ],
                 ),
