@@ -363,8 +363,7 @@ class _HomePageState extends State<HomePage> {
                                           Container(
                                             height: 40,
                                             width: 25,
-                                            child: Image.asset(
-                                                arr[index]["image"]),
+                                            child: Image.asset(arr[index]["image"]),
                                             // color: Colors.red,
                                           ),
                                         ],

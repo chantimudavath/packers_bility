@@ -141,14 +141,6 @@ class _OTPScreenState extends State<OTPScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      // Checkbox(
-                      //         value: this.value,
-                      //         onChanged: (bool? value) {
-                      //           setState(() {
-                      //             this.value = value!;
-                      //           });
-                      //         },
-                      //       ),
                       InkWell(
                         onTap: () => enableResend ? _resendCode() : null,
                         child: Text(
@@ -204,7 +196,7 @@ class _OTPScreenState extends State<OTPScreen> {
               const SizedBox(
                 height: 164,
               ),
-              Align(alignment: Alignment.center,
+              Align(alignment: Alignment.bottomCenter,
                 child: const Text(ProjectStrings.needAnyHelp)),
               SizedBox(
                 height: 15,

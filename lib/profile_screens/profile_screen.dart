@@ -21,18 +21,21 @@ class _MyProfileState extends State<MyProfile> {
           (index) {
             return Column(
               children: [
-                 Padding(
-                   padding: const EdgeInsets.only(left: 20,right: 20,),
-                   child: Card(
-                  elevation: 3,
-                     child: ListTile(
-                      leading: Image.asset(arr[index]["image"]),
-                      title: Text(arr[index]["title"]
-                      ),
-                      subtitle: Text(arr[index]["subTitle"]
-                      ),
-                  //  leading: arr[index]["image"],
-                      trailing: Icon(Icons.arrow_forward_ios),
+                 Container(
+                   child: Padding(
+                     padding: const EdgeInsets.only(left: 20,right: 20,),
+                     child: Card(
+                    elevation: 3,
+                       child: ListTile(
+                        
+                        leading: Image.asset(arr[index]["image"]),
+                        title: Text(arr[index]["title"]
+                        ),
+                        subtitle: Text(arr[index]["subTitle"]
+                        ),
+                    //  leading: arr[index]["image"],
+                        trailing: Icon(Icons.arrow_forward_ios),
+                       ),
                      ),
                    ),
                  )]);

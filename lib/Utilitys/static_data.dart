@@ -44,7 +44,7 @@ class StaticData{
       {
         "title": "User Profile",
         "subTitle": "Change Your Login Details.",
-        "image": "assets/user-icon.png",
+        "image": "assets/user-profile.png",
         
        
       },
@@ -81,48 +81,56 @@ class StaticData{
         "title": "Quotation",
         "subTitle": "Click here to view Quotation",
         "image": "quotation.png",
+        "numbercount":"10"
         
       },
       {
         "title": "Survey List",
         "subTitle": "Click here to view Survey List",
         "image": "assets/survey-list.png",
+         "numbercount":"15"
        
       },
       {
         "title": "Packing List",
         "subTitle": "Click here to view Packing List",
         "image": "assets/packing-list.png",
+         "numbercount":"20"
        
       },
       {
         "title": "LR-Bilty",
         "subTitle": "Click here to view LR-Bilty",
         "image": "assets/LR-Bilty.png",
+         "numbercount":"16"
        
       },
         {
         "title": "Car Condition",
         "subTitle": "Click here to view Car Condition",
         "image": "assets/car-condition.png",
+         "numbercount":"10"
        
       },
       {
         "title": "Bill",
         "subTitle": "Click here to view Bill",
         "image": "assets/bill.png",
+         "numbercount":"10"
        
       },
       {
         "title": "Money Recipt",
         "subTitle": "Click here to view Money Recipt",
         "image": "assets/money-recipt.png",
+         "numbercount":"10"
        
       },
       {
         "title": "PB Card",
         "subTitle": "Click here to view PB Card",
         "image": "assets/pb-card.png",
+         "numbercount":"10"
        
       },
 

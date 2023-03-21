@@ -27,7 +27,13 @@ class _DocumentsListState extends State<DocumentsList> {
             child: Card(
               elevation: 3,
               child: ListTile(
-                leading: Image.asset(arr[index]["image"]),
+                leading: CircleAvatar(
+                  backgroundColor:Color(0xFFECECEC),
+                  radius: 30,
+                  child: Image.asset(arr[index]["image"], height: 40, width: 25,),
+                   ),
+                   
+                
                 title: Text(arr[index]["title"]),
                 subtitle: Text(arr[index]["subTitle"]),
                 //  leading: arr[index]["image"],
