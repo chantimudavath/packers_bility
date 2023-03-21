@@ -33,7 +33,7 @@ class _CustomerState extends State<Customer> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
+              padding: const EdgeInsets.only(left: 20, right: 20, top: 0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,9 +62,7 @@ class _CustomerState extends State<Customer> {
               ),
             ),
             
-            const SizedBox(
-              width: Dimensions.paddingSizeExtraLarge,
-            ),
+           
             Padding(
               padding: const EdgeInsets.all(Dimensions.paddingSizeExtraLarge),
               child: Row(
@@ -72,56 +70,57 @@ class _CustomerState extends State<Customer> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Card(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(40)),
-                      ),
+                  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(25.0),
+  ),
+                    child: SizedBox(
+                      height:200,
+                      width: 200,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 15,top: 10),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children:  [
+                            CircleAvatar(
+                              backgroundColor: Colors.orange,
+                              radius:24,
+                              child:Container( height: 30,
+                              width: 30,
+                                child: Image.asset("assets/whatsapplogo.png")) ,
+                            ),
+                             Text("Whatsapp Number",
+                                style: TextStyle(fontSize: 15)),
+                                SizedBox(height: Dimensions.paddingSizeSmall,),
+                                Text("+91 6200716649",
+                                style: TextStyle(fontSize: 15)),
+                                 SizedBox(height: Dimensions.paddingSizeSmall,),
+                                Text("+91 6200716649",  
+                                style: TextStyle(fontSize: 15)),
+                                SizedBox(height: Dimensions.paddingSizeSmall,),
+                                ElevatedButton(onPressed: null, child: Container(
+                                  width: 120, child: Center(child: Text("Send Whatsapp",style: TextStyle(fontSize: 13,fontWeight: FontWeight.bold,color: Colors.white),))),style: ButtonStyle(
+                                              backgroundColor: MaterialStateProperty.all(Colors.blue),
+                                              padding: MaterialStateProperty.all(EdgeInsets.all(10)),
+                                              // textStyle: MaterialStateProperty.all(TextStyle(fontSize: 10,fontWeight: FontWeight.bold,color: Colors.white))
+                                ),)
 
-                      height: 150,
-                      width: 150,
-                      // color: ColorCodes.red500,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-            //               Container(
-            //                   height: 50,
-            //                   width: 50,
-            //                    decoration:  const BoxDecoration(
-            //  // color: Colors.green,
-            //   borderRadius: BorderRadius.all( Radius.circular(40) )
-            // ),
-            //                   child: Image.asset("assets/quotation-design.png")),
-                          // SizedBox(
-                          //   height: Dimensions.paddingSizeDefult,
-                          // ),
-
-                          Text("Whatsapp Number",
-                              style: TextStyle(fontSize: 20)),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                  Card(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                      ),
-
-                      height: 150,
-                      width: 150,
-                      // color: ColorCodes.red500,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            height: Dimensions.paddingSizeDefult,
-                          ),
-                          Text("Contact Number",
-                              style: TextStyle(fontSize: 20)),
-                        ],
-                      ),
+                   Card(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: const [
+                        SizedBox(
+                          height: Dimensions.paddingSizeDefult,
+                        ),
+                        Text("Contact Number",
+                            style: TextStyle(fontSize: 20)),
+                      ],
                     ),
                   ),
                   SizedBox(

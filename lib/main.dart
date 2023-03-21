@@ -6,7 +6,9 @@ import 'package:packers_bility/constants/constants.dart';
 import 'package:get/get.dart';
 import 'package:packers_bility/document_screen/document.dart';
 import 'package:packers_bility/home_screens/home_screen.dart';
+import 'package:packers_bility/profile_screens/customer.dart';
 import 'package:packers_bility/profile_screens/profile_screen.dart';
+import 'package:packers_bility/total_quotations/total_quotation.dart';
 import 'LoginFlow/welcomescreen.dart';
 
 Future<void> main() async {
@@ -60,11 +62,12 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
        getPages: [
-        GetPage(name: '/', page: () => const DocumentsList()),
+        GetPage(name: '/', page: () => const Customer()),
         GetPage(name: '/otpScreen', page: () => const OTPScreen()),
         GetPage(name: '/homePage', page: () => const HomePage()),
         GetPage(name: '/welComeScreen', page: () => const WelComeScreen()),
         GetPage(name: '/documentsList', page: () => const DocumentsList()),
+        GetPage(name: '/total_quotation', page: () => const total_quotation()),
       ],
     );
   }
