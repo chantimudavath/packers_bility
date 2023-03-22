@@ -26,6 +26,7 @@ class _DocumentsListState extends State<DocumentsList> {
               right: 20,
             ),
             child: Card(
+              
               elevation: 3,
               child: ListTile(
                 leading: CircleAvatar(

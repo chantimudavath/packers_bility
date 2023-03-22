@@ -28,7 +28,7 @@ class _total_quotationState extends State<total_quotation> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
+               Container(
               margin: EdgeInsets.only(top: 10, left: 25, right: 25),
               child: TextFormField(
                 cursorColor: Colors.grey,
@@ -43,7 +43,7 @@ class _total_quotationState extends State<total_quotation> {
                           color: Colors.grey,
                           fontSize: 18
                         ),
-                        prefixIcon: Container(
+                        suffixIcon: Container(
                           padding: EdgeInsets.all(15),
                           child: Icon(
                             Icons.search),
@@ -79,42 +79,56 @@ class _total_quotationState extends State<total_quotation> {
                 
               ),
             ),
-            SizedBox(
-              height: 13,
-            ),
-            Center(
-              child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25.0),
-                ),
-                color: Colors.white,
-                elevation: 5.0,
-                child: Row(
+           
+            Column(
+              children: List.generate(10, (index) =>  Padding(
+                padding: const EdgeInsets.only(left: 15,right: 15),
+                child: Column(
                   children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.blue,
+                           borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(10),
+                            topRight: Radius.circular(10)
+           ),
+        
+                        ),
+                  // color: Colors.green,
+                  height: MediaQuery.of(context).size.height*0.05,
+                      child:Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,)
+                ),
+                
                     Container(
-                      // padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-                      height: 210,
-                      width: MediaQuery.of(context).size.width * 0.85,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            
-                            padding: const EdgeInsets.only(top: 20, left: 10),
-                            child: Text('QUOTATIONS :#52107'),
-                            
-                          ),
-                        ],
-                      ),
+                      color: Colors.red,
+                      height: MediaQuery.of(context).size.height*0.20,
                     ),
+                    
+                     Container(
+                        decoration: BoxDecoration(
+                          color: Colors.blue,
+                           borderRadius: BorderRadius.only(
+                           bottomLeft: Radius.circular(10),
+                            bottomRight: Radius.circular(10)
+           ),
+                        ),
+                  // color: Colors.green,
+                  height: MediaQuery.of(context).size.height*0.05,
+                ),
+                    
+                    SizedBox(height: 10,),
                     
                   ],
                 ),
               ),
+              
+              
+               ),
             ),
           ],
         ),
-      ),
+         ),
     );
   }
 }
