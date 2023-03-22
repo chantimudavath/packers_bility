@@ -110,6 +110,7 @@ class _HomePageState extends State<HomePage> {
                 pageSnapping: true,
                 onPageChanged: (index, _) {},
               ),
+              
               itemBuilder: (context, index, realIdx) {
                 return Padding(
                   padding: const EdgeInsets.only(right: 5, top: 20, left: 5),
