@@ -86,7 +86,9 @@ class _total_quotationState extends State<total_quotation> {
                 child: Column(
                   children: [
                       Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
+                             boxShadow: [BoxShadow(blurRadius: 10,color: Colors.black,offset: Offset(1,3))] ,
+                       
                           color: Colors.blue,
                            borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(10),
@@ -101,12 +103,18 @@ class _total_quotationState extends State<total_quotation> {
                 ),
                 
                     Container(
-                      color: Colors.red,
+                      decoration: BoxDecoration(
+                                  boxShadow: [BoxShadow(blurRadius: 10,color: Colors.black,offset: Offset(1,1))] ,
+                          color: Colors.white,
+                          
+                        ),
+                      // color: Colors.white,
                       height: MediaQuery.of(context).size.height*0.20,
                     ),
                     
                      Container(
                         decoration: BoxDecoration(
+                                  boxShadow: [BoxShadow(blurRadius: 10,color: Colors.black,offset: Offset(1,3))] ,
                           color: Colors.blue,
                            borderRadius: BorderRadius.only(
                            bottomLeft: Radius.circular(10),
