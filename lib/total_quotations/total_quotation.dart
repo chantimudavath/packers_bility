@@ -81,7 +81,7 @@ class _total_quotationState extends State<total_quotation> {
               children: List.generate(
                 quotList.length,
                 (index) => Padding(
-                  padding: const EdgeInsets.only(left: 15, right: 15),
+                  padding: const EdgeInsets.only(left: 15, right: 15,bottom:15 ),
                   child: Column(
                     children: [
                       Container(
