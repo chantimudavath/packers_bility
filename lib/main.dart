@@ -62,7 +62,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
        getPages: [
-        GetPage(name: '/', page: () => const total_quotation()),
+        GetPage(name: '/', page: () => const HomePage()),
         GetPage(name: '/otpScreen', page: () => const OTPScreen()),
         GetPage(name: '/homePage', page: () => const HomePage()),
         GetPage(name: '/welComeScreen', page: () => const WelComeScreen()),

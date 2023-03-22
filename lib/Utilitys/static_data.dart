@@ -143,11 +143,110 @@ class StaticData{
     List quotationList = [
       {
         "no": "1",
-        "quotationID": "52107",
-        "name": "quotation.png",
-        "cost":"10",
-        "from":"Delhi",
-        "to":"Mumbai",
+        "quotationID": "#52107",
+        "name": "Rajiv Kumar",
+        "cost":"21,625.00",
+        "from":"DELHI",
+        "to":"MUMBAI",
+        "date":"24-12-2022",
+        "mobileNo":"+91 6200716649"
+        
+      },
+      {
+        "no": "1",
+        "quotationID": "#52107",
+        "name": "Rajiv Kumar",
+        "cost":"21,625.00",
+        "from":"DELHI",
+        "to":"MUMBAI",
+        "date":"24-12-2022",
+        "mobileNo":"+91 6200716649"
+        
+      },
+      {
+        "no": "1",
+        "quotationID": "#52107",
+        "name": "Rajiv Kumar",
+        "cost":"21,625.00",
+        "from":"DELHI",
+        "to":"MUMBAI",
+        "date":"24-12-2022",
+        "mobileNo":"+91 6200716649"
+        
+      },
+      {
+        "no": "1",
+        "quotationID": "#52107",
+        "name": "Rajiv Kumar",
+        "cost":"21,625.00",
+        "from":"DELHI",
+        "to":"MUMBAI",
+        "date":"24-12-2022",
+        "mobileNo":"+91 6200716649"
+        
+      },
+      {
+        "no": "1",
+        "quotationID": "#52107",
+        "name": "Rajiv Kumar",
+        "cost":"21,625.00",
+        "from":"DELHI",
+        "to":"MUMBAI",
+        "date":"24-12-2022",
+        "mobileNo":"+91 6200716649"
+        
+      },
+      {
+        "no": "1",
+        "quotationID": "#52107",
+        "name": "Rajiv Kumar",
+        "cost":"21,625.00",
+        "from":"DELHI",
+        "to":"MUMBAI",
+        "date":"24-12-2022",
+        "mobileNo":"+91 6200716649"
+        
+      },
+      {
+        "no": "1",
+        "quotationID": "#52107",
+        "name": "Rajiv Kumar",
+        "cost":"21,625.00",
+        "from":"DELHI",
+        "to":"MUMBAI",
+        "date":"24-12-2022",
+        "mobileNo":"+91 6200716649"
+        
+      },
+      {
+        "no": "1",
+        "quotationID": "#52107",
+        "name": "Rajiv Kumar",
+        "cost":"21,625.00",
+        "from":"DELHI",
+        "to":"MUMBAI",
+        "date":"24-12-2022",
+        "mobileNo":"+91 6200716649"
+        
+      },
+      {
+        "no": "1",
+        "quotationID": "#52107",
+        "name": "Rajiv Kumar",
+        "cost":"21,625.00",
+        "from":"DELHI",
+        "to":"MUMBAI",
+        "date":"24-12-2022",
+        "mobileNo":"+91 6200716649"
+        
+      },
+      {
+        "no": "1",
+        "quotationID": "#52107",
+        "name": "Rajiv Kumar",
+        "cost":"21,625.00",
+        "from":"DELHI",
+        "to":"MUMBAI",
         "date":"24-12-2022",
         "mobileNo":"+91 6200716649"
         
