@@ -13,18 +13,18 @@ class Customer extends StatefulWidget {
 class _CustomerState extends State<Customer> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(
-        leading: const Icon(Icons.menu),
+    return Scaffold(
+      appBar: AppBar(
+        leading: const Icon(Icons.format_list_bulleted),
         title: const Text(
           '',
-          // AppLocalizationUtil.getTranslatedString("nice_packers_movers")
         ),
         actions: const [
-          Icon(Icons.alarm_add_outlined),
+          Icon(Icons.notifications),
           SizedBox(
             width: 10,
           ),
-          Icon(Icons.man)
+          Icon(Icons.person)
         ],
       ),
       body: SingleChildScrollView(
@@ -38,12 +38,9 @@ class _CustomerState extends State<Customer> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Stack(children: [
-                  
-                  ]),
+                  Stack(children: []),
                   const SizedBox(
                     width: Dimensions.paddingSizeDefult,
-                    // width: Dimensions.paddingSizeDefult,
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,7 +50,10 @@ class _CustomerState extends State<Customer> {
                         padding: const EdgeInsets.only(top: 10),
                         child: Text(
                           "CUSTOMER SUPPORT",
-                          style: TextStyle(fontSize: 20),
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            ),
                         ),
                       ),
                     ],
@@ -61,8 +61,6 @@ class _CustomerState extends State<Customer> {
                 ],
               ),
             ),
-            
-           
             Padding(
               padding: const EdgeInsets.all(Dimensions.paddingSizeExtraLarge),
               child: Row(
@@ -70,71 +68,161 @@ class _CustomerState extends State<Customer> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Card(
-                  shape: RoundedRectangleBorder(
-    borderRadius: BorderRadius.circular(25.0),
-  ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25.0),
+                    ),
                     child: SizedBox(
-                      height:200,
-                      width: 200,
+                      height: 210,
+                      width: 210,
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 15,top: 10),
+                        padding: const EdgeInsets.only(left: 15, top: 10),
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children:  [
+                          children: [
                             CircleAvatar(
                               backgroundColor: Colors.orange,
-                              radius:24,
-                              child:Container( height: 30,
-                              width: 30,
-                                child: Image.asset("assets/whatsapplogo.png")) ,
+                              radius: 24,
+                              child: Container(
+                                  height: 30,
+                                  width: 30,
+                                  child:
+                                      Image.asset("assets/whatsapplogo.png")),
                             ),
-                             Text("Whatsapp Number",
-                                style: TextStyle(fontSize: 15)),
-                                SizedBox(height: Dimensions.paddingSizeSmall,),
-                                Text("+91 6200716649",
-                                style: TextStyle(fontSize: 15)),
-                                 SizedBox(height: Dimensions.paddingSizeSmall,),
-                                Text("+91 6200716649",  
-                                style: TextStyle(fontSize: 15)),
-                                SizedBox(height: Dimensions.paddingSizeSmall,),
-                                ElevatedButton(onPressed: null, child: Container(
-                                  width: 120, child: Center(child: Text("Send Whatsapp",style: TextStyle(fontSize: 13,fontWeight: FontWeight.bold,color: Colors.white),))),style: ButtonStyle(
-                                              backgroundColor: MaterialStateProperty.all(Colors.blue),
-                                              padding: MaterialStateProperty.all(EdgeInsets.all(10)),
-                                              // textStyle: MaterialStateProperty.all(TextStyle(fontSize: 10,fontWeight: FontWeight.bold,color: Colors.white))
-                                ),)
-
+                             SizedBox(
+                              height: Dimensions.paddingSizeSmall,
+                            ),
+                            Text(
+                              "Whatsapp Number",
+                                style: TextStyle(
+                                fontSize: 17,
+                                fontWeight: FontWeight.bold
+                                  ),
+                                ),
+                            SizedBox(
+                              height: Dimensions.paddingSizeSmall,
+                            ),
+                            Text(
+                              "+91 6200716649",
+                              style: TextStyle(fontSize: 17)),
+                            SizedBox(
+                              height: Dimensions.paddingSizeSmall,
+                            ),
+                            Text(
+                              "+91 6200716649",
+                              style: TextStyle(fontSize: 17)),
+                              
+                            SizedBox(
+                              height: Dimensions.paddingSizeSmall,
+                            ),
+                            ElevatedButton(
+                              onPressed: null,
+                              child: Container(
+                                  width: 120,
+                                  child: Center(
+                                      child: Text(
+                                    "Send Whatsapp",
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        // fontWeight: FontWeight.bold,
+                                        color: Colors.white),
+                                  ))),
+                              style: ButtonStyle(
+                                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(26.0),
+                                ),
+                                ),
+                                backgroundColor:
+                                    MaterialStateProperty.all(Colors.blue),
+                                padding: MaterialStateProperty.all(
+                                    EdgeInsets.all(10)),
+                                // textStyle: MaterialStateProperty.all(TextStyle(fontSize: 10,fontWeight: FontWeight.bold,color: Colors.white))
+                              ),
+                            )
                           ],
                         ),
                       ),
                     ),
                   ),
-                   Card(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: const [
-                        SizedBox(
-                          height: Dimensions.paddingSizeDefult,
-                        ),
-                        Text("Contact Number",
-                            style: TextStyle(fontSize: 20)),
-                      ],
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25.0),
                     ),
-                  ),
-                  SizedBox(
-                    height: Dimensions.fontSizeExtraLarge,
-                  ),
-                  SizedBox(
-                    height: Dimensions.fontSizeExtraLarge,
+                    child: SizedBox(
+                      height: 210,
+                      width: 210,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 15, top: 10),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            CircleAvatar(
+                              radius: 24,
+                              child: Container(
+                                  height: 30,
+                                  width: 30,
+                                  child: Image.asset("phonecall.png"),
+                                  ),
+                            ),
+                            SizedBox(
+                              height: Dimensions.paddingSizeSmall,
+                            ),
+                            Text(
+                              "Contact Number",
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  fontWeight:FontWeight.bold)),
+                            SizedBox(
+                              height: Dimensions.paddingSizeSmall,
+                            ),
+                            Text(
+                              "+91 6200716649",
+                                style: TextStyle(
+                                  fontSize: 17)),
+                            SizedBox(
+                              height: Dimensions.paddingSizeSmall,
+                            ),
+                            Text(
+                              "+91 6200716649",
+                                style: TextStyle(
+                                  fontSize: 17)),
+                            SizedBox(
+                              height: Dimensions.paddingSizeSmall,
+                            ),
+                            ElevatedButton(
+                              onPressed: null,
+                              child: Container(
+                                  width: 120,
+                                  child: Center(
+                                      child: Text(
+                                    "Call us",
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        // fontWeight: FontWeight.bold,
+                                        color: Colors.white),
+                                  ))),
+                              style: ButtonStyle(
+                                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(26.0),
+                                ),
+                                ),
+                                backgroundColor:
+                                    MaterialStateProperty.all(Colors.blue),
+                                padding: MaterialStateProperty.all(
+                                    EdgeInsets.all(10)),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),
             ),
-         
-         
-         
           ],
         ),
       ),
