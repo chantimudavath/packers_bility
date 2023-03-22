@@ -346,74 +346,38 @@ class _HomePageState extends State<HomePage> {
                             crossAxisAlignment:WrapCrossAlignment.start,
                             children: List.generate(arr.length, (index) => 
                             
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.start,
-
-                              children: [
-                                CircleAvatar(
-                                  radius: 30,
-                                  backgroundColor:  Color.fromARGB(255, 240, 239, 239),
-                                  child: Image.asset(arr[index]["image"],
-                                  height: 24,
-                                  width: 24,
+                            InkWell(
+                              onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => arr[index]["route"]));
+                              },
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                            
+                                children: [
+                                  CircleAvatar(
+                                    radius: 30,
+                                    backgroundColor:  Color.fromARGB(255, 240, 239, 239),
+                                    child: Image.asset(arr[index]["image"],
+                                    height: 24,
+                                    width: 24,
+                                    ),
                                   ),
-                                ),
-
-                                SizedBox(height: 10,),
-
-                                Container(
-                                  width: 70,
-                                  child: Center(child: Text(arr[index]["title"])),
-                                )
-                              ],
+                            
+                                  SizedBox(height: 10,),
+                            
+                                  Container(
+                                    width: 70,
+                                    child: Center(child: Text(arr[index]["title"])),
+                                  )
+                                ],
+                              ),
                             )
                             
                             
                             ),
 
                           )
-                          // GridView.count(
-                          //   crossAxisCount: 4,
-                          //   crossAxisSpacing: 2.0,
-                          //   mainAxisSpacing: 10.0,
-                          //   children: List.generate(arr.length, (index) {
-                          //     return Column(
-                          //       children: [
-                          //         Container(
-                          //             height: 70,
-                          //             width: 70,
-                          //             decoration: BoxDecoration(
-                          //               // border: Border.all(width: 1.0),
-                          //               color:
-                          //                   Color.fromARGB(255, 240, 239, 239),
-
-                          //               borderRadius: const BorderRadius.all(
-                          //                 Radius.circular(
-                          //                     40.0), // <--- border radius here
-                          //               ),
-                          //             ),
-                          //             child: Column(
-                          //               crossAxisAlignment:
-                          //                   CrossAxisAlignment.center,
-                          //               mainAxisAlignment:
-                          //                   MainAxisAlignment.center,
-                          //               children: [
-                          //                 Container(
-                          //                   height: 40,
-                          //                   width: 25,
-                          //                   child: Image.asset(arr[index]["image"]),
-                          //                   // color: Colors.red,
-                          //                 ),
-                          //               ],
-                          //             )
-                          //             // Image.asset(arr[index]["image"],fit: BoxFit.fill),
-                          //             ),
-                          //         Text(arr[index]["title"])
-                          //       ],
-                          //     );
-                          //   }),
-                          // ),
                        
                         ),
                       ],
