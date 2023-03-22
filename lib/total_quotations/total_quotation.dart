@@ -122,8 +122,8 @@ class _total_quotationState extends State<total_quotation> {
                           children: [
                             Container(
                               height:
-                                  MediaQuery.of(context).size.height * 0.045,
-                              color: Colors.green,
+                                  MediaQuery.of(context).size.height * 0.040,
+                              color: Colors.white,
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -141,41 +141,189 @@ class _total_quotationState extends State<total_quotation> {
                                           width: 05,
                                         ),
                                         Text(
-                                  "#" + quotList[index]["name"],
+                                   quotList[index]["name"],
                                   style: TextStyle(
-                                      fontSize: 17, color: Colors.white),
+                                      fontSize: 17, color: Colors.black),
                                 ),
                                       ],
                                     ),
+                                  ),
+                                  Container(
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Icon(Icons.currency_bitcoin),
+                                        SizedBox(
+                                          width: 05,
+                                        ),
+                                        Text(
+                                   quotList[index]["cost"],
+                                  style: TextStyle(
+                                      fontSize: 17, color: Colors.black),
+                                ),
+                                      ],
+
+                                    ),
                                   )
+
                                 ],
                               ),
                             ),
+
+                            Container(
+                              height: 1,
+                              color: Colors.black.withOpacity(0.1),
+                            ),
+                           
                             Container(
                               height: MediaQuery.of(context).size.height * 0.11,
-                              color: Colors.red,
+                              color: Colors.white,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 10,top: 10),
+                                      child: Container(
+                                      child:  Column(
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text("From",style: TextStyle(
+                                        fontSize: 14, color: Colors.black)),
+                                          Text( quotList[index]["from"],style: TextStyle(
+                                        fontSize: 25, color: Colors.black))
+                                        ],
+                                      )
+                                      ),
+                                    ),
+
+                                 Padding(
+                                   padding: const EdgeInsets.only(top: 30),
+                                   child: Column(
+                                     children: [
+                                       Container(
+                                        child: Row(
+                                          children: [
+                                               Container(width: 30,
+                                          color: Colors.black,
+                                          height: 1,),
+                                          Icon(Icons.abc),
+                                           Container(width: 30,
+                                             color: Colors.black,
+                                           height: 1,),
+                                          ],
+                                        ),
+                                       ),
+
+                                       Text( quotList[index]["date"],style: TextStyle(
+                                        fontSize: 16, color: Colors.black))
+                                     ],
+                                   ),
+                                 ),
+                                 Padding(
+                                      padding: const EdgeInsets.only(right: 10,top: 10),
+                                      child: Container(
+                                      child:  Column(
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text("To",style: TextStyle(
+                                        fontSize: 14, color: Colors.black)),
+                                          Text( quotList[index]["to"],style: TextStyle(
+                                        fontSize: 25, color: Colors.black))
+                                        ],
+                                      )
+                                      ),
+                                    )
+                             
+                             
+                             
+                             
+                                ],
+                              ),
+                            ),
+
+                            Container(
+                              height: 1,
+                              color: Colors.black.withOpacity(0.1),
                             ),
                             Container(
                               height:
-                                  MediaQuery.of(context).size.height * 0.045,
-                              color: Colors.green,
+                                  MediaQuery.of(context).size.height * 0.044,
+                              color: Colors.white,
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 10,right: 10,top: 10),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Icon(Icons.call),
+                                          SizedBox(
+                                            width: 5,
+                                          ),
+                                          Text( quotList[index]["mobileNo"],style: TextStyle(
+                                          fontSize: 14, color: Colors.black))
+                                        ],
+                                      ),
+                                    ),
+                                     Container(
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Icon(Icons.book),
+                                          SizedBox(
+                                            width: 5,
+                                          ),
+                                          Text( "Share PDF",style: TextStyle(
+                                          fontSize: 14, color: Colors.black))
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
                             ),
+                            
                           ],
                         ),
                       ),
                       Container(
                         decoration: BoxDecoration(
-                          color: Colors.grey,
+                          color: Colors.grey.withOpacity(0.5),
                           borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(10),
                               bottomRight: Radius.circular(10)),
                         ),
                         // color: Colors.green,
                         height: MediaQuery.of(context).size.height * 0.05,
+
+                        child: Center(
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 10,right: 10),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                       children: [
+                          Text("More Option",style: TextStyle(
+                                        fontWeight: FontWeight.w400,  fontSize: 18, color: Colors.black)),
+
+                                        InkWell(child: Icon(Icons.man_rounded)),
+                       ],
+                            ),
+                          ),
+                        ),
                       ),
-                      SizedBox(
-                        height: 10,
-                      ),
+                     
                     ],
                   ),
                 ),

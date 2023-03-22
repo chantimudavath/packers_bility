@@ -144,8 +144,8 @@ class StaticData{
       {
         "no": "1",
         "quotationID": "52107",
-        "name": "quotation.png",
-        "cost":"10",
+        "name": "Rajiv Kumar",
+        "cost":"21,625.00",
         "from":"Delhi",
         "to":"Mumbai",
         "date":"24-12-2022",
