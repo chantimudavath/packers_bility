@@ -1,39 +1,50 @@
 
 
+import 'package:packers_bility/total_quotations/total_quotation.dart';
+
 class StaticData{
   static List mainScreenIcons() {
     List mainScreenIcons = [
       {
         "title": "Quotation",
-        "image": "assets/quotation.png"
+        "image": "assets/quotation.png",
+         "route": total_quotation()
       },
        {
         "title": "Survey List",
-        "image": "assets/survey-list.png"
+        "image": "assets/survey-list.png",
+         "route": total_quotation()
       },
        {
         "title": "Packing List",
-        "image": "assets/Packing-List.png"
+        "image": "assets/Packing-List.png",
+         "route": total_quotation()
       },
+      
        {
         "title": "LR-Bilty",
-        "image": "assets/LR-Bilty.png"
+        "image": "assets/LR-Bilty.png",
+         "route": total_quotation()
       },
        {
         "title": "Car Condition",
-        "image": "assets/Car-Condition.png"
+        "image": "assets/Car-Condition.png",
+         "route": total_quotation()
       },
        {
         "title": "Bill",
-        "image": "assets/bill.png"
+        "image": "assets/bill.png",
+         "route": total_quotation()
       },
        {
         "title": "Money Recipt",
-        "image": "assets/Money-Recipt.png"
+        "image": "assets/Money-Recipt.png",
+         "route": total_quotation()
       },
        {
         "title": "PB Card",
-        "image": "assets/pb-card.png"
+        "image": "assets/pb-card.png",
+         "route": total_quotation()
       },
       
     ];

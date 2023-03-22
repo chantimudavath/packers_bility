@@ -42,7 +42,8 @@ class _HomePageState extends State<HomePage> {
           Icon(Icons.person)
         ],
       ),
-      bottomNavigationBar: CurvedNavigationBar(
+      bottomNavigationBar:
+       CurvedNavigationBar(
         backgroundColor: Colors.transparent,
         index: selectedIconIndex,
         buttonBackgroundColor: ColorCodes.AppleColor,
@@ -58,7 +59,7 @@ class _HomePageState extends State<HomePage> {
         ),
         items: <Widget>[
           Image.asset('assets/home-icon.png',height: 25,),
-          Image.asset('assets/subscriptions.png',height: 25),
+          Image.asset('assets/Subscriptions.png',height: 25),
           Image.asset('assets/add-bill.png',height: 25,),
           Image.asset('assets/bill-design.png',height: 25,),
           Image.asset('assets/setting.png',height: 25,),
@@ -340,47 +341,49 @@ class _HomePageState extends State<HomePage> {
                           // padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
                           height: 250,
                           width: MediaQuery.of(context).size.width * 0.85,
-                          child: GridView.count(
-                            crossAxisCount: 4,
-                            crossAxisSpacing: 2.0,
-                            mainAxisSpacing: 10.0,
-                            children: List.generate(arr.length, (index) {
-                              return Column(
+                          child: 
+                          Wrap(
+                            direction:Axis.horizontal,
+                            alignment:WrapAlignment.start,
+                            runAlignment: WrapAlignment.start,
+                            spacing:14.0,
+                            runSpacing:0.0,
+                            crossAxisAlignment:WrapCrossAlignment.start,
+                            children: List.generate(arr.length, (index) => 
+                            
+                            InkWell(
+                              onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => arr[index]["route"]));
+                              },
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                            
                                 children: [
+                                  CircleAvatar(
+                                    radius: 30,
+                                    backgroundColor:  Color.fromARGB(255, 240, 239, 239),
+                                    child: Image.asset(arr[index]["image"],
+                                    height: 24,
+                                    width: 24,
+                                    ),
+                                  ),
+                            
+                                  SizedBox(height: 10,),
+                            
                                   Container(
-                                      height: 70,
-                                      width: 70,
-                                      decoration: BoxDecoration(
-                                        // border: Border.all(width: 1.0),
-                                        color:
-                                            Color.fromARGB(255, 240, 239, 239),
-
-                                        borderRadius: const BorderRadius.all(
-                                          Radius.circular(
-                                              40.0), // <--- border radius here
-                                        ),
-                                      ),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Container(
-                                            height: 40,
-                                            width: 25,
-                                            child: Image.asset(arr[index]["image"]),
-                                            // color: Colors.red,
-                                          ),
-                                        ],
-                                      )
-                                      // Image.asset(arr[index]["image"],fit: BoxFit.fill),
-                                      ),
-                                  Text(arr[index]["title"])
+                                    width: 70,
+                                    child: Center(child: Text(arr[index]["title"])),
+                                  )
                                 ],
-                              );
-                            }),
-                          ),
+                              ),
+                            )
+                            
+                            
+                            ),
+
+                          )
+                       
                         ),
                       ],
                     )),
