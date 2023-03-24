@@ -55,6 +55,7 @@ class _CustomerState extends State<Customer> {
                 children: [
                   Stack(children: []),
                   const SizedBox(
+                    
                     width: Dimensions.paddingSizeDefult,
                   ),
                   // Column(
@@ -76,186 +77,211 @@ class _CustomerState extends State<Customer> {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 12, top: 42, bottom:568),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Card(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
-                    ),
-                    child: SizedBox(
-                      height: 156,
-                      width: 152,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 15, top: 10),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Container(
-                              child: Image.asset(
-                                "assets/whatsappicon.png",
-                                 height: 41,
-                                  width: 41,
-                                  fit: BoxFit.cover,
-                                  ),
-                            ),
-                            // CircleAvatar(
-                            //   // backgroundColor: Colors.orange,
-                            //   // radius: 24,
-                            //   child: Container(
-                            //       height: 41,
-                            //       width: 41,
-                            //       child:
-                            //           Image.asset("assets/whatsappicon.png")),
-                            // ),
-                             SizedBox(
-                              height: Dimensions.paddingSizeSmall,
-                            ),
-                            Text(
-                              "Whatsapp Number",
-                                style: TextStyle(
-                                fontSize: 13,
-                                fontWeight: FontWeight.bold
-                                  ),
+            Container(
+              color: Color(0xFFF5F5F5),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 12, top: 42, bottom:568),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                        
+                      ),
+                      child: SizedBox(
+                        height: 156,
+                        width: 152,
+                        child: Padding(
+                          
+                          padding: const EdgeInsets.only(left: 0, top: 0),
+                          child: Container(
+                            color: Color(0xFFFDEEDB,), 
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Container(
+                                  child: Image.asset(
+                                    "assets/whatsappicon.png",
+                                     height: 41,
+                                      width: 41,
+                                      fit: BoxFit.cover,
+                                      ),
                                 ),
-                            SizedBox(
-                              height: 3,
+                                // CircleAvatar(
+                                //   // backgroundColor: Colors.orange,
+                                //   // radius: 24,
+                                //   child: Container(
+                                //       height: 41,
+                                //       width: 41,
+                                //       child:
+                                //           Image.asset("assets/whatsappicon.png")),
+                                // ),
+                                 SizedBox(
+                                  height: Dimensions.paddingSizeSmall,
+                                ),
+                                Text(
+                                  "Whatsapp Number",
+                                    style: TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.bold
+                                      ),
+                                    ),
+                                SizedBox(
+                                  height: 3,
+                                ),
+                                Text(
+                                  "+91 6200716649",
+                                  style: TextStyle(
+                                    fontSize: 12)),
+                                // SizedBox(
+                                //   height: Dimensions.paddingSizeSmall,
+                                // ),
+                                Text(
+                                  "+91 6200716649",
+                                  style: TextStyle(fontSize: 12)),
+                                  
+                                SizedBox(
+                                  height: 6,
+                                ),
+                                ElevatedButton(
+                                  onPressed: null,
+                                  child: Container(
+                                      width: 114,
+                                      height: 21,
+                                      child: Center(
+                                          child: Text(
+                                        "Send Whatsapp",
+                                        style: TextStyle(
+                                            fontSize: 9,
+                                            // fontWeight: FontWeight.bold,
+                                            color: Colors.white),
+                                      ))),
+                                  style: ButtonStyle(
+                                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                    RoundedRectangleBorder(
+                                                  borderRadius: BorderRadius.circular(26.0),
+                                    ),
+                                    ),
+                                    backgroundColor:
+                                        MaterialStateProperty.all(Colors.blue),
+                                    padding: MaterialStateProperty.all(
+                                        EdgeInsets.all(10)),
+                                    // textStyle: MaterialStateProperty.all(TextStyle(fontSize: 10,fontWeight: FontWeight.bold,color: Colors.white))
+                                  ),
+                                )
+                              ],
                             ),
-                            Text(
-                              "+91 6200716649",
-                              style: TextStyle(
-                                fontSize: 12)),
-                            // SizedBox(
-                            //   height: Dimensions.paddingSizeSmall,
-                            // ),
-                            Text(
-                              "+91 6200716649",
-                              style: TextStyle(fontSize: 12)),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 21,
+                    ),
+                    Padding(
+                padding: const EdgeInsets.only(right: 15,),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      child: SizedBox(
+                        height: 156,
+                        width: 152,
+                        child: Container(
+                          
+                          color: Color(0xFFE0F2FF),
+                          child: Padding(
+                            
+                            padding: const EdgeInsets.only(left: 15, top: 10),
+                            child: Column(
                               
-                            SizedBox(
-                              height: 6,
-                            ),
-                            ElevatedButton(
-                              onPressed: null,
-                              child: Container(
-                                  width: 114,
-                                  height: 21,
-                                  child: Center(
-                                      child: Text(
-                                    "Send Whatsapp",
-                                    style: TextStyle(
-                                        fontSize: 9,
-                                        // fontWeight: FontWeight.bold,
-                                        color: Colors.white),
-                                  ))),
-                              style: ButtonStyle(
-                                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(26.0),
-                                ),
-                                ),
-                                backgroundColor:
-                                    MaterialStateProperty.all(Colors.blue),
-                                padding: MaterialStateProperty.all(
-                                    EdgeInsets.all(10)),
-                                // textStyle: MaterialStateProperty.all(TextStyle(fontSize: 10,fontWeight: FontWeight.bold,color: Colors.white))
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 21,
-                  ),
-                  Card(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25.0),
-                    ),
-                    child: SizedBox(
-                      height: 156,
-                      width: 152,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 15, top: 10),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            CircleAvatar(
-                              radius: 24,
-                              child: Container(
-                                  height: 30,
-                                  width: 30,
-                                  child: Image.asset("phonering.png"),
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                   child: Image.asset("phonering.png"
+                                  //  height: 39,
+                                  //  width: 41,
+                                  //  fit: BoxFit.cover,
+                                   ),
+                                   
                                   ),
-                            ),
-                            SizedBox(
-                              height: Dimensions.paddingSizeSmall,
-                            ),
-                            Text(
-                              "Contact Number",
-                                style: TextStyle(
-                                  fontSize: 13,
-                                  fontWeight:FontWeight.bold)),
-                            SizedBox(
-                              height:3,
-                            ),
-                            Text(
-                              "+91 6200716649",
-                                style: TextStyle(
-                                  fontSize: 12)),
-                            SizedBox(
-                              height: 3,
-                            ),
-                            Text(
-                              "+91 6200716649",
-                                style: TextStyle(
-                                  fontSize: 12)),
-                            SizedBox(
-                              height:6,
-                            ),
-                            ElevatedButton(
-                              onPressed: null,
-                              child: Container(
-                                  width: 99,
-                                  height: 21,
-                                  child: Center(
-                                    
-                                      child: Text(
-                                    "Call Us",
+                                
+                                SizedBox(
+                                  height:3,
+                                ),
+                                Text(
+                                  "Contact Number",
                                     style: TextStyle(
-                                        fontSize: 9,
-                                        // fontWeight: FontWeight.bold,
-                                        color: Colors.white),
-                                  ))),
-                              style: ButtonStyle(
-                                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
+                                      fontSize: 13,
+                                      fontWeight:FontWeight.bold)),
+                                SizedBox(
+                                  height:3,
                                 ),
+                                Text(
+                                  "+91 6200716649",
+                                    style: TextStyle(
+                                      fontSize: 12)),
+                                SizedBox(
+                                  height: 3,
                                 ),
-                                backgroundColor:
-                                    MaterialStateProperty.all(Colors.blue),
-                                padding: MaterialStateProperty.all(
-                                    EdgeInsets.all(10)),
-                              ),
+                                Text(
+                                  "+91 6200716649",
+                                    style: TextStyle(
+                                      fontSize: 12)),
+                                SizedBox(
+                                  height:6,
+                                ),
+                                ElevatedButton(
+                                  onPressed: null,
+                                  child: Container(
+                                      width: 99,
+                                      height: 21,
+                                      child: Center(
+                                        
+                                          child: Text(
+                                        "Call Us",
+                                        style: TextStyle(
+                                            fontSize: 9,
+                                            // fontWeight: FontWeight.bold,
+                                            color: Colors.white),
+                                      ))),
+                                  style: ButtonStyle(
+                                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                    RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0),
+                                    ),
+                                    ),
+                                    backgroundColor:
+                                        MaterialStateProperty.all(Colors.blue),
+                                    padding: MaterialStateProperty.all(
+                                        EdgeInsets.all(10)),
+                                  ),
+                                ),
+                              ],
                             ),
-                          ],
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ],
-              ),
+                    ],
+                    ),
+                    ),
+                  ],
+                ),
+                    ),
             ),
           ],
-        ),
-      ),
+           
+            ),
+            ),
     );
   }
 }
