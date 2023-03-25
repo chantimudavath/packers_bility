@@ -18,7 +18,7 @@ class _total_quotationState extends State<total_quotation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffeef0fd),
+      backgroundColor: Color(0xFFEEF0FD),
       appBar: AppBar(
         leading: const Icon(Icons.format_list_bulleted),
         title: const Text(
@@ -27,14 +27,30 @@ class _total_quotationState extends State<total_quotation> {
             fontSize: 14,
           ),
         ),
-        actions: const [
-          Icon(Icons.notifications),
+        actions: [
+          Container(
+            child: Image.asset(
+            "assets/notification-bell.png",
+            height: 16,
+            width: 14,
+            ),
+            ),
           SizedBox(
-            width: 10,
+            width: 13,
           ),
-          Icon(Icons.person),
+          Container(
+             child: Image.asset(
+                        "assets/user-icon.png",
+                        height: 16,
+                        width: 13,
+                        ),
+          ),
+          SizedBox(
+            width: 11,
+          ),
         ],
       ),
+
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -49,17 +65,24 @@ class _total_quotationState extends State<total_quotation> {
                       borderRadius: BorderRadius.circular(30),
                       borderSide: BorderSide.none),
                   hintText: 'Search',
-                  hintStyle: TextStyle(color: Colors.grey, fontSize: 18),
+                  hintStyle: TextStyle(
+                    color: Color(0xFF080808),
+                     fontSize: 12,
+                     fontWeight: FontWeight.normal,
+                     ),
                   suffixIcon: Container(
                     padding: EdgeInsets.all(15),
-                    child: Icon(Icons.search),
-                    width: 18,
+                    child: Image.asset(
+                            "assets/search-icon.png",
+                    // width: 22,
+                    // height: 20,
+                    ),
                   ),
                 ),
               ),
             ),
             SizedBox(
-              height: 13,
+              height: 12,
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -70,37 +93,41 @@ class _total_quotationState extends State<total_quotation> {
                   Text(
                     'TOTAL QUOTATIONS :',
                     style: TextStyle(
-                      color: Colors.orange,
-                      fontSize: 18,
+                      color: Color(0xFFE87B26),
+                      fontSize: 14,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Text(' 107',
+                  Text(
+                    ' 107',
                       style: TextStyle(
-                        color: Colors.blue,
-                        fontSize: 18,
+                        color: Color(0xFF047ED1),
+                        fontSize: 14,
                         fontWeight: FontWeight.bold,
                       ))
                 ],
               ),
             ),
             SizedBox(
-              height: 12,
+              height: 13,
             ),
             Column(
               children: List.generate(
                 quotList.length,
                 (index) => Padding(
                   padding:
-                      const EdgeInsets.only(left: 15, right: 15, bottom: 15),
+                  
+                      const EdgeInsets.only(left: 22, right: 28),
                   child: Column(
                     children: [
                       Container(
+                        
                           decoration: const BoxDecoration(
-                            color: Colors.blue,
+                            color: Color(0xFF057ECF),
                             borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(10),
-                                topRight: Radius.circular(10)),
+                                topLeft: Radius.circular(20),
+                                topRight: Radius.circular(20),
+                                ),
                           ),
                           // color: Colors.green,
                           height: MediaQuery.of(context).size.height * 0.05,
@@ -119,7 +146,7 @@ class _total_quotationState extends State<total_quotation> {
                               Padding(
                                 padding: const EdgeInsets.only(right: 15),
                                 child: Text(
-                                  "#" + quotList[index]["quotationID"],
+                                  " " + quotList[index]["quotationID"],
                                   style: TextStyle(
                                       fontSize: 17, color: Colors.white),
                                 ),

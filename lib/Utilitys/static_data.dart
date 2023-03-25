@@ -154,7 +154,7 @@ class StaticData{
     List quotationList = [
       {
         "no": "1",
-        "quotationID": "#52107",
+        "quotationID": "QUOTATIONS : #52107",
         "name": "Rajiv Kumar",
         "cost":"21,625.00",
         "from":"DELHI",
