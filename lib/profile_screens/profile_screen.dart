@@ -15,13 +15,13 @@ class _MyProfileState extends State<MyProfile> {
   List arr = StaticData.profileList();
    int selectedIconIndex = 2;
   final List<String> images = [
-    'https://images.unsplash.com/photo-1586882829491-b81178aa622e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80',
-    'https://images.unsplash.com/photo-1586871608370-4adee64d1794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2862&q=80',
-    'https://images.unsplash.com/photo-1586901533048-0e856dff2c0d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
-    'https://images.unsplash.com/photo-1586902279476-3244d8d18285?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80',
-    'https://images.unsplash.com/photo-1586943101559-4cdcf86a6f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1556&q=80',
-    'https://images.unsplash.com/photo-1586951144438-26d4e072b891?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
-    'https://images.unsplash.com/photo-1586953983027-d7508a64f4bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
+    // 'https://images.unsplash.com/photo-1586882829491-b81178aa622e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80',
+    // 'https://images.unsplash.com/photo-1586871608370-4adee64d1794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2862&q=80',
+    // 'https://images.unsplash.com/photo-1586901533048-0e856dff2c0d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
+    // 'https://images.unsplash.com/photo-1586902279476-3244d8d18285?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80',
+    // 'https://images.unsplash.com/photo-1586943101559-4cdcf86a6f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1556&q=80',
+    // 'https://images.unsplash.com/photo-1586951144438-26d4e072b891?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
+    // 'https://images.unsplash.com/photo-1586953983027-d7508a64f4bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
   ];
 
   Widget profileList() {
@@ -155,27 +155,29 @@ class _MyProfileState extends State<MyProfile> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Stack(children: [
-                    CircleAvatar(
-                      child: Image.asset(
+                    Container( child: Image.asset(
                         "assets/packers.png",
                         height: 92,
                         width: 92,
                         fit: BoxFit.fill,
                       ),
-                      backgroundColor: ColorCodes.grey2,
-                      radius: 54.5,
-                    ),
-                    Positioned(
-                        left: 70,
-                        child:
-                    CircleAvatar(
-                          radius: 15,
-                      child: Image.asset("assets/editicon.png",
-                        // height: 19,
-                        // width: 19,
-                        ),
-                        ),
-                        ),
+                      // backgroundColor: ColorCodes.grey2,
+                      // radius: 54.5,
+                      ),
+                    // CircleAvatar(
+                     
+                    // ),
+                    // Positioned(
+                    //     left: 70,
+                    //     child:
+                    // CircleAvatar(
+                    //       radius: 15,
+                    //   child: Image.asset("assets/editicon.png",
+                    //     // height: 19,
+                    //     // width: 19,
+                    //     ),
+                    //     ),
+                    //     ),
                   ]),
                   const SizedBox(
                     width: Dimensions.paddingSizeDefult,

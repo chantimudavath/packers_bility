@@ -1,7 +1,11 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:packers_bility/constants/padding_screen.dart';
+
+import '../Utilitys/colors.dart';
+import '../Utilitys/static_data.dart';
 
 class Customer extends StatefulWidget {
   const Customer({super.key});
@@ -11,8 +15,19 @@ class Customer extends StatefulWidget {
 }
 
 class _CustomerState extends State<Customer> {
+   int selectedIconIndex = 2;
+  // final List<String> images = [
+  //   // 'https://images.unsplash.com/photo-1586882829491-b81178aa622e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80',
+  //   // 'https://images.unsplash.com/photo-1586871608370-4adee64d1794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2862&q=80',
+  //   // 'https://images.unsplash.com/photo-1586901533048-0e856dff2c0d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
+  //   // 'https://images.unsplash.com/photo-1586902279476-3244d8d18285?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80',
+  //   // 'https://images.unsplash.com/photo-1586943101559-4cdcf86a6f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1556&q=80',
+  //   // 'https://images.unsplash.com/photo-1586951144438-26d4e072b891?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
+  //   // 'https://images.unsplash.com/photo-1586953983027-d7508a64f4bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
+  // ];
   @override
   Widget build(BuildContext context) {
+     List arr = StaticData.mainScreenIcons();
     return Scaffold(
       appBar: AppBar(
         leading: const Icon(Icons.format_list_bulleted),
@@ -42,6 +57,31 @@ class _CustomerState extends State<Customer> {
             width: 11),
         ],
       ),
+       bottomNavigationBar:
+       CurvedNavigationBar(
+        backgroundColor: Colors.transparent,
+        index: selectedIconIndex,
+        buttonBackgroundColor: ColorCodes.AppleColor,
+        height: 60.0,
+        color: ColorCodes.whiteWithOpacity,
+        onTap: (index) {
+          setState(() {
+            selectedIconIndex = index;
+          });
+        },
+        animationDuration: Duration(
+          milliseconds: 200,
+        ),
+        items: <Widget>[
+          Image.asset('assets/home-icon.png',height: 25,),
+          Image.asset('assets/Subscriptions.png',height: 25),
+          Image.asset('assets/add-bill.png',height: 25,),
+          Image.asset('assets/bill-design.png',height: 25,),
+          Image.asset('assets/setting.png',height: 25,),
+         
+        ],
+      ),
+
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -199,7 +239,7 @@ class _CustomerState extends State<Customer> {
                           color: Color(0xFFE0F2FF),
                           child: Padding(
                             
-                            padding: const EdgeInsets.only(left: 15, top: 10),
+                            padding: const EdgeInsets.only(left: 17, top: 14),
                             child: Column(
                               
                               mainAxisAlignment: MainAxisAlignment.center,
