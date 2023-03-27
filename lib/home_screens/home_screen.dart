@@ -362,7 +362,7 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   CircleAvatar(
                                     radius: 30,
-                                    backgroundColor:  Color.fromARGB(255, 240, 239, 239),
+                                     backgroundColor: Color(0xFFEEF0FD),
                                     child: Image.asset(arr[index]["image"],
                                     height: 24,
                                     width: 24,

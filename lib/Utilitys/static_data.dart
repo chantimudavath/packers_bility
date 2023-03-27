@@ -192,7 +192,7 @@ class StaticData{
         "cost":"21,625.00",
         "from":"DELHI",
         "to":"MUMBAI",
-        "date":"24-12-2022",
+        "date":"24 - 12 - 2022",
         "mobileNo":"+91 6200716649"
         
       },

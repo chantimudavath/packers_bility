@@ -30,27 +30,26 @@ class _total_quotationState extends State<total_quotation> {
         actions: [
           Container(
             child: Image.asset(
-            "assets/notification-bell.png",
-            height: 16,
-            width: 14,
+              "assets/notification-bell.png",
+              height: 16,
+              width: 14,
             ),
-            ),
+          ),
           SizedBox(
             width: 13,
           ),
           Container(
-             child: Image.asset(
-                        "assets/user-icon.png",
-                        height: 16,
-                        width: 13,
-                        ),
+            child: Image.asset(
+              "assets/user-icon.png",
+              height: 16,
+              width: 13,
+            ),
           ),
           SizedBox(
             width: 11,
           ),
         ],
       ),
-
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -67,15 +66,15 @@ class _total_quotationState extends State<total_quotation> {
                   hintText: 'Search',
                   hintStyle: TextStyle(
                     color: Color(0xFF080808),
-                     fontSize: 12,
-                     fontWeight: FontWeight.normal,
-                     ),
+                    fontSize: 12,
+                    fontWeight: FontWeight.normal,
+                  ),
                   suffixIcon: Container(
                     padding: EdgeInsets.all(15),
                     child: Image.asset(
-                            "assets/search-icon.png",
-                    // width: 22,
-                    // height: 20,
+                      "assets/search-icon.png",
+                      // width: 22,
+                      // height: 20,
                     ),
                   ),
                 ),
@@ -98,8 +97,7 @@ class _total_quotationState extends State<total_quotation> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Text(
-                    ' 107',
+                  Text(' 107',
                       style: TextStyle(
                         color: Color(0xFF047ED1),
                         fontSize: 14,
@@ -115,9 +113,7 @@ class _total_quotationState extends State<total_quotation> {
               children: List.generate(
                 quotList.length,
                 (index) => Padding(
-                  padding:
-                  
-                      const EdgeInsets.only(left: 22, right: 28),
+                  padding: const EdgeInsets.only(left: 22, right: 28),
                   child: Column(
                     children: [
                       Container(
@@ -125,12 +121,12 @@ class _total_quotationState extends State<total_quotation> {
                           decoration: const BoxDecoration(
                             color: Color(0xFF057ECF),
                             borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(20),
-                                topRight: Radius.circular(20),
-                                ),
+                              topLeft: Radius.circular(20),
+                              topRight: Radius.circular(20),
+                            ),
                           ),
                           // color: Colors.green,
-                          height: MediaQuery.of(context).size.height * 0.05,
+                          height: MediaQuery.of(context).size.height * 0.04,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -140,7 +136,9 @@ class _total_quotationState extends State<total_quotation> {
                                 child: Text(
                                   quotList[index]["no"],
                                   style: TextStyle(
-                                      fontSize: 17, color: Colors.white),
+                                      fontSize: 14,
+                                      color: Color(0xFFFFFFFF),
+                                      ),
                                 ),
                               ),
                               Padding(
@@ -148,7 +146,10 @@ class _total_quotationState extends State<total_quotation> {
                                 child: Text(
                                   " " + quotList[index]["quotationID"],
                                   style: TextStyle(
-                                      fontSize: 17, color: Colors.white),
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xFFFFFFFF),
+                                      ),
                                 ),
                               )
                             ],
@@ -160,7 +161,7 @@ class _total_quotationState extends State<total_quotation> {
                           children: [
                             Container(
                               height:
-                                  MediaQuery.of(context).size.height * 0.040,
+                                  MediaQuery.of(context).size.height * 0.04,
                               color: Colors.white,
                               child: Row(
                                 mainAxisAlignment:
@@ -175,26 +176,40 @@ class _total_quotationState extends State<total_quotation> {
                                           CrossAxisAlignment.center,
                                       children: [
                                         CircleAvatar(
-                                          backgroundColor: Colors.grey,
-                                          radius: 10,
-                                          child: new SvgPicture.asset(
+                                          radius: 20,
+                                          backgroundColor: Color(0xFFEEF0FD),
+                                          child: Image.asset(
                                             'assets/profileIcon.png',
-                                            height: 200.0,
-                                            width: 20.0,
-                                          
+                                            height: 22,
+                                            width: 22,
                                           ),
                                         ),
+                                        // CircleAvatar(
+                                        //   backgroundColor: Colors.grey,
+                                        //   radius: 10,
+                                        //   child: new SvgPicture.asset(
+                                        //     'assets/profileIcon.png',
+                                        //     height: 22.0,
+                                        //     width: 22.0,
+
+                                        //   ),
+                                        // ),
                                         SizedBox(
                                           width: 05,
                                         ),
                                         Text(
                                           quotList[index]["name"],
                                           style: TextStyle(
-                                              fontSize: 17,
-                                              color: Colors.black),
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold,
+                                            color: Color(0xFF525252),
+                                          ),
                                         ),
                                       ],
                                     ),
+                                  ),
+                                  SizedBox(
+                                    width: 68,
                                   ),
                                   Container(
                                     child: Row(
@@ -203,15 +218,37 @@ class _total_quotationState extends State<total_quotation> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
-                                        Icon(Icons.currency_rupee_outlined),
+                                        CircleAvatar(
+                                          radius: 20,
+                                          backgroundColor: Color(0xFFEEF0FD),
+                                            child: Image.asset(
+                                            'assets/rupee.png',
+                                            height: 22,
+                                            width: 22,
+                                          ),
+                                        ),
                                         SizedBox(
                                           width: 05,
                                         ),
+                                        // CircleAvatar(
+                                        //   radius: 20,
+                                        //   backgroundColor: Color(0xFFEEF0FD),
+                                          // child: Image.asset(
+                                          //   'assets/rupee.png',
+                                          //   height: 22,
+                                          //   width: 22,
+                                          // ),
+                                        // ),
                                         Text(
                                           quotList[index]["cost"],
                                           style: TextStyle(
-                                              fontSize: 17,
-                                              color: Colors.black),
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.bold,
+                                              color: Color(0xFF525252),
+                                              ),
+                                        ),
+                                        SizedBox(
+                                          width: 25,
                                         ),
                                       ],
                                     ),
@@ -225,7 +262,7 @@ class _total_quotationState extends State<total_quotation> {
                             ),
                             Container(
                               height: MediaQuery.of(context).size.height * 0.11,
-                              color: Colors.white,
+                              // color: Colors.white,
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -233,7 +270,7 @@ class _total_quotationState extends State<total_quotation> {
                                 children: [
                                   Padding(
                                     padding: const EdgeInsets.only(
-                                        left: 10, top: 10),
+                                        left: 10, top: 18 ),
                                     child: Container(
                                         child: Column(
                                       mainAxisAlignment:
@@ -241,14 +278,19 @@ class _total_quotationState extends State<total_quotation> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        Text("From",
-                                            style: TextStyle(
-                                                fontSize: 14,
-                                                color: Colors.black)),
+                                        Text(
+                                          "FROM",
+                                          style: TextStyle(
+                                              fontSize: 11,
+                                              color: Color(0xFFDDE0E9),
+                                              ),
+                                        ),
                                         Text(quotList[index]["from"],
                                             style: TextStyle(
-                                                fontSize: 25,
-                                                color: Colors.black))
+                                                fontSize: 19,
+                                                color: Color(0xFF525252),
+                                                ),
+                                                ),
                                       ],
                                     )),
                                   ),
@@ -264,25 +306,62 @@ class _total_quotationState extends State<total_quotation> {
                                                 color: Colors.black,
                                                 height: 1,
                                               ),
-                                              Icon(Icons.abc),
+                                              SizedBox(
+                                                width: 3,
+                                              ),
+                                              
+                                              CircleAvatar(
+                                                radius: 15,
+                                                backgroundColor:
+                                                    Color(0xFFEEF0FD),
+                                                child: Image.asset(
+                                                  'assets/truck.png',
+                                                  height: 24,
+                                                  width: 24,
+                                                ),
+                                              ),
+                                              
+                                              // Icon(Icons.abc),
+                                              SizedBox(
+                                                width: 3,
+                                              ),
+
                                               Container(
                                                 width: 30,
                                                 color: Colors.black,
                                                 height: 1,
                                               ),
+                                              
                                             ],
                                           ),
                                         ),
-                                        Text(quotList[index]["date"],
+                                        SizedBox(
+                                          height: 1,
+                                        ),
+                                        // Container(
+                                        //   child: Row(
+                                        //     children: [
+                                        //        Icon(Icons.picture_as_pdf),
+                                        //     ],
+                                        //   ),
+                                          
+                                          
+                                        // ),
+                                        Text(
+                                          quotList[index]["date"],
                                             style: TextStyle(
-                                                fontSize: 16,
-                                                color: Colors.black))
+                                                fontSize: 11,
+                                                // fontWeight: FontWeight.bold,
+                                                color: Color(0xFF525252),
+                                                ),
+                                                ),
+                                                
                                       ],
                                     ),
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.only(
-                                        right: 10, top: 10),
+                                        right: 24, top: 18),
                                     child: Container(
                                         child: Column(
                                       mainAxisAlignment:
@@ -290,14 +369,18 @@ class _total_quotationState extends State<total_quotation> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        Text("To",
+                                        Text("TO",
                                             style: TextStyle(
-                                                fontSize: 14,
-                                                color: Colors.black)),
+                                                fontSize: 11,
+                                                color:Color(0xFFDDE0E9),
+                                                ),
+                                                ),
                                         Text(quotList[index]["to"],
                                             style: TextStyle(
-                                                fontSize: 25,
-                                                color: Colors.black))
+                                                fontSize: 19,
+                                                color: Color(0xFF525252),
+                                                ),
+                                                ),
                                       ],
                                     )),
                                   )
@@ -327,14 +410,33 @@ class _total_quotationState extends State<total_quotation> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          Icon(Icons.phone_in_talk),
+                                          CircleAvatar(
+                                          radius: 20,
+                                          backgroundColor: Color(0xFFEEF0FD),
+                                          child: Image.asset(
+                                            'assets/phone_call.png',
+                                            height: 22,
+                                            width: 22,
+                                          ),
+                                        ),
+                                          // Icon(Icons.phone_in_talk),
                                           SizedBox(
                                             width: 5,
                                           ),
-                                          Text(quotList[index]["mobileNo"],
-                                              style: TextStyle(
-                                                  fontSize: 14,
-                                                  color: Colors.black))
+                                          Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            crossAxisAlignment: CrossAxisAlignment.center,
+                                            children: [
+                                              Text(quotList[index]["mobileNo"],
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      fontWeight: FontWeight.bold,
+                                                      // fontWeight: FontWeight.bold,
+                                                      color: Color(0xFF525252),
+                                                      ),
+                                                      ),
+                                            ],
+                                          ),
                                         ],
                                       ),
                                     ),
@@ -345,14 +447,26 @@ class _total_quotationState extends State<total_quotation> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          Icon(Icons.picture_as_pdf),
+                                          CircleAvatar(
+                                          radius: 20,
+                                          backgroundColor: Color(0xFFEEF0FD),
+                                          child: Image.asset(
+                                            'assets/pdf.png',
+                                            height: 22,
+                                            width: 22,
+                                          ),
+                                        ),
+                                          // Icon(Icons.picture_as_pdf),
                                           SizedBox(
                                             width: 5,
                                           ),
                                           Text("Share PDF",
                                               style: TextStyle(
                                                   fontSize: 14,
-                                                  color: Colors.black))
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Color(0xFF525252),
+                                                  ),
+                                                  ),
                                         ],
                                       ),
                                     )
@@ -365,26 +479,29 @@ class _total_quotationState extends State<total_quotation> {
                       ),
                       Container(
                         decoration: BoxDecoration(
-                          color: Colors.grey.withOpacity(0.5),
+                          color: Color(0xFFD9DCE5).withOpacity(0.5),
                           borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(10),
-                              bottomRight: Radius.circular(10)),
+                              bottomLeft: Radius.circular(20),
+                              bottomRight: Radius.circular(20)),
                         ),
                         // color: Colors.green,
-                        height: MediaQuery.of(context).size.height * 0.05,
+                        height: MediaQuery.of(context).size.height * 0.04,
 
                         child: Center(
                           child: Padding(
-                            padding: const EdgeInsets.only(left: 10, right: 10),
+                            padding: const EdgeInsets.only(left: 15, right: 10),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("More Option",
+                                Text(
+                                  "More Options",
                                     style: TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 18,
-                                        color: Colors.black)),
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 12,
+                                        color: Color(0xFF525252),
+                                        ),
+                                        ),
                                 InkWell(child: Icon(Icons.expand_more)),
                               ],
                             ),
