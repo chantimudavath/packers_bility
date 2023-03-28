@@ -406,9 +406,9 @@ class _total_quotationState extends State<total_quotation> {
                                     Container(
                                       child: Row(
                                         mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                            MainAxisAlignment.center,
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                            CrossAxisAlignment.center,
                                         children: [
                                           CircleAvatar(
                                           radius: 20,
@@ -423,20 +423,15 @@ class _total_quotationState extends State<total_quotation> {
                                           SizedBox(
                                             width: 5,
                                           ),
-                                          Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            crossAxisAlignment: CrossAxisAlignment.center,
-                                            children: [
-                                              Text(quotList[index]["mobileNo"],
-                                                  style: TextStyle(
-                                                      fontSize: 14,
-                                                      fontWeight: FontWeight.bold,
-                                                      // fontWeight: FontWeight.bold,
-                                                      color: Color(0xFF525252),
-                                                      ),
-                                                      ),
-                                            ],
-                                          ),
+                                          Text(quotList[index]["mobileNo"],
+                                          
+                                              style: TextStyle(
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.bold,
+                                                  // fontWeight: FontWeight.bold,
+                                                  color: Color(0xFF525252),
+                                                  ),
+                                                  ),
                                         ],
                                       ),
                                     ),
@@ -445,7 +440,7 @@ class _total_quotationState extends State<total_quotation> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                            CrossAxisAlignment.center,
                                         children: [
                                           CircleAvatar(
                                           radius: 20,
