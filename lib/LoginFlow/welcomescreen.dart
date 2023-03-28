@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:packers_bility/constants/app_localization_util.dart';
+import 'package:packers_bility/home_screens/home_screen.dart';
 
 import '../Utilitys/imageUtility.dart';
 
@@ -195,7 +196,7 @@ class _WelComeScreenState extends State<WelComeScreen> {
                       
                       onPressed: () {
                   if (_formKey.currentState!.validate()) {
-               
+               Get.to(HomePage());
                   }
                 },
                       style: ButtonStyle(

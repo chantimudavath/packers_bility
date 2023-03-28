@@ -1,11 +1,13 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:packers_bility/Utilitys/colors.dart';
 import 'package:packers_bility/Utilitys/font_manager.dart';
 import 'package:packers_bility/Utilitys/static_data.dart';
 import 'package:packers_bility/constants/app_localization_util.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:packers_bility/profile_screens/profile_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -31,7 +33,12 @@ class _HomePageState extends State<HomePage> {
     List arr = StaticData.mainScreenIcons();
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.format_list_bulleted),
+        leading: InkWell(
+          onTap: () {
+            
+            Get.to(MyProfile());
+          },
+          child: const Icon(Icons.format_list_bulleted)),
         title: Text(
             AppLocalizationUtil.getTranslatedString("Nice Packers & Movers")),
         actions: const [

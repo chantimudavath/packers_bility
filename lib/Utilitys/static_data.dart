@@ -68,7 +68,7 @@ class StaticData{
       {
         "title": "Quotation Theme",
         "subTitle": "Change quotation theme and Form.",
-        "image": "assets/quotation-theme.png",
+        "image": "assets/Quotation-Theme.png",
        
       },
       {
