@@ -19,7 +19,8 @@ class _MyProfileState extends State<MyProfile> {
     print("Aj${arr.length}");
     return Column(
       children: List.generate(arr.length, (index) {
-        return Column(children: [
+        return Column(
+          children: [
           Container(
             child: Padding(
               padding: const EdgeInsets.only(
@@ -102,7 +103,7 @@ class _MyProfileState extends State<MyProfile> {
         backgroundColor: Colors.transparent,
         index: selectedIconIndex,
         buttonBackgroundColor: ColorCodes.AppleColor,
-        height: 60.0,
+        height: 44.0,
         color: ColorCodes.whiteWithOpacity,
         onTap: (index) {
           setState(() {
