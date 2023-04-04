@@ -68,11 +68,14 @@ class _OTPScreenState extends State<OTPScreen> {
               Align(
                 alignment: Alignment.center,
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 119),
+                  padding: const EdgeInsets.only(top: 119,),
                   child: Container(
                     child: const Text(
                       "Sign UP",
-                      style: TextStyle(fontSize: 20),
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Color(0xFF808080)
+                        ),
                     ),
                   ),
                 ),
@@ -105,7 +108,7 @@ class _OTPScreenState extends State<OTPScreen> {
                    ),
                  ),
                Positioned(
-                left: MediaQuery.of(context).size.width*0.28,
+                left: MediaQuery.of(context).size.width*0.24,
                 bottom: 0,
                  child: Container(
                   width: 216,
@@ -115,11 +118,20 @@ class _OTPScreenState extends State<OTPScreen> {
                ),
                 ],
                ),
+               SizedBox(
+                height: 30,
+               ),
               Padding(
-                padding: EdgeInsets.only(left: 72, right: 72, top: 36),
+                padding: EdgeInsets.only(left: 55, right: 286),
                 child: Row(
                   children: [
-                    Text('Enter OTP'),
+                    Text('Enter OTP',
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Color(0xFF000000),
+
+                    ),),
+                    
                   ],
                 ),
               ),
@@ -129,13 +141,13 @@ class _OTPScreenState extends State<OTPScreen> {
 
               getotp(),
               const SizedBox(
-                height: 26,
+                height: 10,
               ),
 
               Padding(
                 padding: EdgeInsets.only(
-                  left: 75,
-                  right: 35,
+                  left: 55,
+                  
                 ),
                 child: Container(
                   child: Row(
@@ -147,7 +159,7 @@ class _OTPScreenState extends State<OTPScreen> {
                         child: Text(
                           "Resend OTP",
                           style: TextStyle(
-                              fontSize: 13,
+                              fontSize: 10,
                               color: enableResend
                                   ? Color.fromARGB(255, 39, 39, 39)
                                   : Colors.grey,
@@ -156,11 +168,14 @@ class _OTPScreenState extends State<OTPScreen> {
                         ),
                       ),
                       SizedBox(
-                        width: 5,
+                        width: 16,
                       ),
                       Text(
                         secondsRemaining.toString(),
-                        style: TextStyle(color: Colors.red, fontSize: 10),
+                        style: TextStyle(
+                          color: Color(0xFF466EFB),
+                           fontSize: 10,
+                           ),
                       ),
                     ],
                   ),
@@ -193,36 +208,41 @@ class _OTPScreenState extends State<OTPScreen> {
                           textStyle: MaterialStateProperty.all(
                               TextStyle(fontSize: 14))),
                     ),
-                  )),
+                  ),
+                  ),
               const SizedBox(
-                height: 164,
+                height: 184,
               ),
               Align(alignment: Alignment.bottomCenter,
-                child: const Text(ProjectStrings.needAnyHelp)),
+                child: const Text(
+                  ProjectStrings.needAnyHelp,
+                  style: TextStyle(
+                    fontSize: 10,
+                    color: Color(0xFF000000),
+                  ),)),
               SizedBox(
                 height: 15,
               ),
-              // Align(
-              //   alignment: Alignment.bottomCenter,
-              //   child: Row(
-              //   children: [Icon(Icons.call),
-              //   SizedBox(
-
-              //   ),
-              //   Text(ProjectStrings.callUsAt)
-              //   ],
-
-              //   ),
-              // )
+              
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.call),
+                  Container(
+                    child: Image.asset(
+                      "assets/call_icon.png",
+                  height: 19,
+                  width: 19,
+            ),
+                    ),
                   SizedBox(
                     width: 10,
                   ),
-                  Text(ProjectStrings.callUsAt),
+                  Text(ProjectStrings.callUsAt,
+                  style: TextStyle(
+                    fontSize: 10,
+                    color: Color(0xFF000000),
+                  ),),
                 ],
               )
             ],
@@ -233,29 +253,34 @@ class _OTPScreenState extends State<OTPScreen> {
   }
 
   getotp() {
-    return OtpTextField(
-      numberOfFields: 4,
-      fieldWidth: 55,
-      borderWidth: 3,
-      borderRadius: const BorderRadius.all(Radius.circular(10.0)),
-      // borderColor: Color(0xFF512DA8),
-      //set to true to show as box or false to show as dash
-      showFieldAsBox: true,
-      //runs when a code is typed in
-      onCodeChanged: (String code) {
-        //handle validation or checks here
-      },
-      //runs when every textfield is filled
-      onSubmit: (String verificationCode) {
-        showDialog(
-            context: context,
-            builder: (context) {
-              return AlertDialog(
-                title: Text("Verification Code"),
-                content: Text('Code entered is $verificationCode'),
-              );
-            });
-      }, // end onSubmit
+   
+    return Padding(
+      
+      padding: const EdgeInsets.only(left: 0, right: 55),
+      child: OtpTextField(
+        numberOfFields: 4,
+        fieldWidth: 55,
+        borderWidth: 3,
+        borderRadius: const BorderRadius.all(Radius.circular(10.0)),
+        // borderColor: Color(0xFF512DA8),
+        //set to true to show as box or false to show as dash
+        showFieldAsBox: true,
+        //runs when a code is typed in
+        onCodeChanged: (String code) {
+          //handle validation or checks here
+        },
+        //runs when every textfield is filled
+        onSubmit: (String verificationCode) {
+          showDialog(
+              context: context,
+              builder: (context) {
+                return AlertDialog(
+                  title: Text("Verification Code"),
+                  content: Text('Code entered is $verificationCode'),
+                );
+              });
+        }, // end onSubmit
+      ),
     );
   }
 }

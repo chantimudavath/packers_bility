@@ -14,21 +14,13 @@ class MyProfile extends StatefulWidget {
 class _MyProfileState extends State<MyProfile> {
   List arr = StaticData.profileList();
    int selectedIconIndex = 2;
-  final List<String> images = [
-    // 'https://images.unsplash.com/photo-1586882829491-b81178aa622e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80',
-    // 'https://images.unsplash.com/photo-1586871608370-4adee64d1794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2862&q=80',
-    // 'https://images.unsplash.com/photo-1586901533048-0e856dff2c0d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
-    // 'https://images.unsplash.com/photo-1586902279476-3244d8d18285?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80',
-    // 'https://images.unsplash.com/photo-1586943101559-4cdcf86a6f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1556&q=80',
-    // 'https://images.unsplash.com/photo-1586951144438-26d4e072b891?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
-    // 'https://images.unsplash.com/photo-1586953983027-d7508a64f4bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
-  ];
 
   Widget profileList() {
     print("Aj${arr.length}");
     return Column(
       children: List.generate(arr.length, (index) {
-        return Column(children: [
+        return Column(
+          children: [
           Container(
             child: Padding(
               padding: const EdgeInsets.only(
@@ -76,18 +68,34 @@ class _MyProfileState extends State<MyProfile> {
   Widget build(BuildContext context) {
     // List arr = StaticData.mainScreenIcons();
     return Scaffold(
+      backgroundColor: Color(0xFFEEF0FD),
       appBar: AppBar(
         leading: const Icon(Icons.format_list_bulleted),
         title: const Text(
           'Nice Packers & Movers',
           // AppLocalizationUtil.getTranslatedString("nice_packers_movers")
         ),
-        actions: const [
-          Icon(Icons.notifications),
-          SizedBox(
-            width: 10,
+        actions: [
+          Container(
+            child: Image.asset(
+              "assets/notification-bell.png",
+              height: 16,
+              width: 14,
+            ),
           ),
-          Icon(Icons.person)
+          SizedBox(
+            width: 13,
+          ),
+          Container(
+            child: Image.asset(
+              "assets/user-icon.png",
+              height: 16,
+              width: 13,
+            ),
+          ),
+          SizedBox(
+            width: 11,
+          ),
         ],
       ),
       bottomNavigationBar:
@@ -95,7 +103,7 @@ class _MyProfileState extends State<MyProfile> {
         backgroundColor: Colors.transparent,
         index: selectedIconIndex,
         buttonBackgroundColor: ColorCodes.AppleColor,
-        height: 60.0,
+        height: 44.0,
         color: ColorCodes.whiteWithOpacity,
         onTap: (index) {
           setState(() {
@@ -106,41 +114,49 @@ class _MyProfileState extends State<MyProfile> {
           milliseconds: 200,
         ),
         items: <Widget>[
-          Image.asset('assets/home-icon.png',height: 25,),
-          Image.asset('assets/Subscriptions.png',height: 25),
-          Image.asset('assets/add-bill.png',height: 25,),
-          Image.asset('assets/bill-design.png',height: 25,),
-          Image.asset('assets/setting.png',height: 25,),
-          // Icon(
-          //   Icons.play_arrow_outlined,
-          //   size: 30,
-          //   color:
-          //       selectedIconIndex == 0 ? ColorCodes.WHITE : ColorCodes.blackD80,
-          // ),
-          // Icon(
-          //   Icons.search,
-          //   size: 30,
-          //   color:
-          //       selectedIconIndex == 1 ? ColorCodes.WHITE : ColorCodes.blackD80,
-          // ),
-          // Icon(
-          //   Icons.home_outlined,
-          //   size: 30,
-          //   color:
-          //       selectedIconIndex == 2 ? ColorCodes.WHITE : ColorCodes.blackD80,
-          // ),
-          // Icon(
-          //   Icons.favorite_border_outlined,
-          //   size: 30,
-          //   color:
-          //       selectedIconIndex == 3 ? ColorCodes.WHITE : ColorCodes.blackD80,
-          // ),
-          // Icon(
-          //   Icons.person_outline,
-          //   size: 30,
-          //   color:
-          //       selectedIconIndex == 4 ? ColorCodes.WHITE : ColorCodes.blackD80,
-          // ),
+          // Image.asset('assets/home-icon.png',height: 25,),
+          // Image.asset('assets/Subscriptions.png',height: 25),
+          // Image.asset('assets/add-bill.png',height: 25,),
+          // Image.asset('assets/bill-design.png',height: 25,),
+          // Image.asset('assets/setting.png',height: 25,),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              
+              children: [
+                Image.asset('assets/home-icon.png',
+                height: 19,
+                width: 23 ,),
+                 Text('Home'),
+              ],
+            ),
+          ),
+         
+          Icon(
+            Icons.search,
+            size: 30,
+            color:
+                selectedIconIndex == 1 ? ColorCodes.WHITE : ColorCodes.blackD80,
+          ),
+          Icon(
+            Icons.home_outlined,
+            size: 30,
+            color:
+                selectedIconIndex == 2 ? ColorCodes.WHITE : ColorCodes.blackD80,
+          ),
+          Icon(
+            Icons.favorite_border_outlined,
+            
+            size: 30,
+            color:
+                selectedIconIndex == 3 ? ColorCodes.WHITE : ColorCodes.blackD80,
+          ),
+          Icon(
+            Icons.person_outline,
+            size: 30,
+            color:
+                selectedIconIndex == 4 ? ColorCodes.WHITE : ColorCodes.blackD80,
+          ),
         ],
       ),
       body: SingleChildScrollView(
