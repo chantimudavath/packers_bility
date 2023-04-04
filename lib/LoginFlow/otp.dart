@@ -18,6 +18,7 @@ class OTPScreen extends StatefulWidget {
 class _OTPScreenState extends State<OTPScreen> {
   int secondsRemaining = 30;
   bool enableResend = false;
+  
   Timer? timer;
 
   @override

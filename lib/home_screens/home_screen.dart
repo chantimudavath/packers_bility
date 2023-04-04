@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
@@ -10,7 +11,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:packers_bility/profile_screens/profile_screen.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  const HomePage({super.key,  User? user});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -118,6 +119,7 @@ class _HomePageState extends State<HomePage> {
                 pageSnapping: true,
                 onPageChanged: (index, _) {},
               ),
+              
               itemBuilder: (context, index, realIdx) {
                 return Padding(
                   padding: const EdgeInsets.only(right: 5, top: 20, left: 5),
@@ -138,6 +140,11 @@ class _HomePageState extends State<HomePage> {
             SizedBox(
               height: 20,
             ),
+            
+    SizedBox(
+              height: 20,
+            ),
+
             Center(
               child: Card(
                   shape: RoundedRectangleBorder(
@@ -160,7 +167,7 @@ class _HomePageState extends State<HomePage> {
                               context,
                               fontSize: 18,
                               lWeight: FontWeight.w500,
-                              color: ColorCodes.BLACK,
+                               color:Color(0xFF010101),
                             )),
                           ),
                         ),
@@ -184,7 +191,7 @@ class _HomePageState extends State<HomePage> {
                                         context,
                                         fontSize: 16,
                                         // lWeight: FontWeight.w400,
-                                        color: ColorCodes.BLACK26,
+                                         color:Color(0xFF6B6B6B),
                                       )),
                                     ),
                                     SizedBox(
@@ -196,7 +203,7 @@ class _HomePageState extends State<HomePage> {
                                         context,
                                         fontSize: 18,
                                         lWeight: FontWeight.w700,
-                                        color: ColorCodes.BLACK,
+                                         color:Color(0xFF010101),
                                       )),
                                     ),
                                     SizedBox(
@@ -208,8 +215,7 @@ class _HomePageState extends State<HomePage> {
                                         context,
                                         fontSize: 14,
                                         lWeight: FontWeight.w400,
-                                        color:
-                                            Color.fromARGB(255, 98, 195, 233),
+                                        color: Color(0xFF1C77B0),
                                       )),
                                     )
                                   ],
@@ -242,7 +248,7 @@ class _HomePageState extends State<HomePage> {
                                         context,
                                         fontSize: 16,
                                         // lWeight: FontWeight.w400,
-                                        color: ColorCodes.BLACK26,
+                                       color:Color(0xFF6B6B6B),
                                       )),
                                     ),
                                     SizedBox(
@@ -254,7 +260,7 @@ class _HomePageState extends State<HomePage> {
                                         context,
                                         fontSize: 18,
                                         lWeight: FontWeight.w700,
-                                        color: ColorCodes.BLACK,
+                                        color:Color(0xFF010101),
                                       )),
                                     ),
                                     SizedBox(
@@ -266,7 +272,7 @@ class _HomePageState extends State<HomePage> {
                                         context,
                                         fontSize: 14,
                                         lWeight: FontWeight.w500,
-                                        color: ColorCodes.BLACK,
+                                        color:Color(0xFF010101),
                                       )),
                                     )
                                   ],
@@ -294,7 +300,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 ),
                           backgroundColor:
-                              MaterialStateProperty.all(Color(0xFF026EB6)),
+                              MaterialStateProperty.all(Color(0xFF047ED1)),
                           padding: MaterialStateProperty.all(EdgeInsets.all(10)),
                           textStyle:
                               MaterialStateProperty.all(TextStyle(fontSize: 14))),
@@ -364,7 +370,7 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   CircleAvatar(
                                     radius: 30,
-                                    backgroundColor:  Color.fromARGB(255, 240, 239, 239),
+                                     backgroundColor: Color(0xFFEEF0FD),
                                     child: Image.asset(arr[index]["image"],
                                     height: 24,
                                     width: 24,
@@ -379,7 +385,7 @@ class _HomePageState extends State<HomePage> {
                                   )
                                 ],
                               ),
-                            )
+                            ),
                             
                             
                             ),
